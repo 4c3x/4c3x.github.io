@@ -1253,7 +1253,10 @@ video::-webkit-media-controls {
     <div id="datetime"></div>
 
     <div id="icon-container">
-        <div class="icon icon-a" data-name="Resume"><span>Resume</span></div>
+        <div class="icon icon-a" data-name="Resume" onclick="openResume()">
+          <span>Resume</span>
+          </div>
+
         <div class="icon icon-c" data-name="Project/Labs"><span>Project/Labs</span></div>
         
 
@@ -1752,7 +1755,10 @@ video::-webkit-media-controls {
         function openGithubProfile() {
             window.open('https://github.com/4c3x', '_blank');
         }
-
+         
+        function openResume() {
+            window.open('https://drive.google.com/file/d/1qsFx9jePG8rEW0DI5-zXMBqE0nGtODUn/view?usp=drive_link', '_blank');
+        }
        
   
     </script>
