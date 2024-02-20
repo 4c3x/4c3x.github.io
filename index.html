@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio with Background Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('media/your-image.jpg'); /* Reference the image directly */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Set the height to fill the entire viewport */
+            font-family: 'Arial', sans-serif;
+            color: #000; /* Black font color */
+            position: relative;
+        }
+
+        #datetime {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            z-index: 2; /* Ensure the tab is above the content */
+        }
+
+        #icon-container {
+            position: absolute;
+            top: 50%; /* Center vertically */
+            left: 10px; /* Adjust as needed */
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column; /* Arrange icons vertically */
+        }
+
+        .icon {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            margin-bottom: 15px; /* Add space between icons */
+            cursor: pointer;
+            position: relative;
+        }
+
+        .icon span {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            background-color: #000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .icon:hover span {
+            display: block;
+        }
+
+        .icon-a {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            background-image: url('media/re.png'); /* Replace 're.png' with the actual path to your icon A image */
+            background-size: contain; /* Change from 'cover' to 'contain' */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent; /* Set the background color to transparent */
+        }
+
+        .icon-c {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            background-image: url('media/fo.png'); /* Replace 'fo.png' with the actual path to your icon C image with a transparent background */
+            background-size: contain; /* Change from 'cover' to 'contain' */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent; /* Set the background color to transparent */
+        }
+
+        .icon-d {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            background-image: url('media/gite.png'); /* Replace 'gite.png' with the actual path to your icon D image with a transparent background */
+            background-size: contain; /* Change from 'cover' to 'contain' */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent; /* Set the background color to transparent */
+        }
+
+        .icon-e {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            background-image: url('media/li.png'); /* Replace 'li.png' with the actual path to your icon E image with a transparent background */
+            background-size: contain; /* Change from 'cover' to 'contain' */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent; /* Set the background color to transparent */
+        }
+
+        .icon-b {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            background-image: url('media/wi.png'); /* Replace 'wi.png' with the actual path to your icon B image with a transparent background */
+            background-size: contain; /* Change from 'cover' to 'contain' */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent; /* Set the background color to transparent */
+        }
+
+        .blank-area {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 20px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+        }
+
+        .blank-area-2 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 20px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+        }
+
+        .blank-area-3 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 20px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+        }
+  
+.per-pro-1 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+        
+
+    .per-pro-1::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .per-pro-1::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 20px;
+    }
+
+    .per-pro-1::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+
+
+.per-pro-2 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+        
+
+    .per-pro-2::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .per-pro-2::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 20px;
+    }
+
+    .per-pro-2::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+.per-pro-3 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+           
+        }
+
+
+        
+
+    .per-pro-3::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .per-pro-3::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 20px;
+    }
+
+    .per-pro-3::-webkit-scrollbar-track {
+        background-color: transparent;
+    }            
+
+
+.per-pro-4 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+        
+
+    .per-pro-4::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .per-pro-4::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 20px;
+    }
+
+    .per-pro-4::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+
+
+         .sec-lab-1 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+        overflow-y: auto; /* Make the content scrollable */
+        }
+
+    .sec-lab-1::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .sec-lab-1::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 5px;
+    }
+
+    .sec-lab-1::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+
+.sec-lab-2 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+    .sec-lab-2::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .sec-lab-2::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 5px;
+    }
+
+    .sec-lab-2::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+.sec-lab-3 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+    .sec-lab-3::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .sec-lab-3::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 5px;
+    }
+
+    .sec-lab-3::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+        .sec-lab-4 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+    .sec-lab-4::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .sec-lab-4::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 5px;
+    }
+
+    .sec-lab-4::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+
+        .prev-button-2 {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .prev-button-3 {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+
+
+        .prev-button-2:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .prev-button-3:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }        
+  
+.per-pro1-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+        
+        .per-pro1-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro2-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+        
+        .per-pro2-prev-button:hover {
+            background-color: grey; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro3-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+        
+        .per-pro3-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro4-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+        
+        .per-pro4-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+         .sec-lab1-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab1-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+ .sec-lab2-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab2-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+  .sec-lab3-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab3-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .sec-lab4-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab4-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .logo {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .icon-name {
+            font-size: 14px; /* Make font size smaller */
+        }
+
+        .close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+     
+        .close-button-2 {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .close-button-2:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .close-button-3 {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .close-button-3:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro1-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .per-pro1-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro2-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .per-pro2-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro3-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .per-pro3-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro4-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .per-pro4-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+          .sec-lab1-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab1-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+
+ .sec-lab2-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab2-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.sec-lab3-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab3-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .sec-lab4-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab4-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+
+        /* New classes for icons in the blank area */
+        .blank-icon {
+            width: 44px;
+            height: 44px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+        }
+
+         
+
+        .blank-icon span {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+         .Personal-Projects-icon {
+            width: 44px;
+            height: 44px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+        }
+
+         .Personal-Projects-icon span {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+.security-labs-icon {
+            width: 44px;
+            height: 44px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+        }
+
+         .security-labs-icon span {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .pp1sc {
+            width: 369px;
+            height: 377px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+            padding: 5px;
+            float: left; 
+        }
+
+
+        .pp1sc-a {
+            background-image: url('media/pp1sc1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .pp1sc-b {
+            background-image: url('media/pp1sc2.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+
+.pp2sc {
+            width: 369px;
+            height: 370px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+            padding: 5px;
+            float: left; 
+        }
+
+
+        .pp2sc-a {
+            background-image: url('media/pp2sc1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .pp2sc-b {
+            background-image: url('media/pp2sc2.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+.pp3sc {
+            width: 360px;
+            height: 377px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+            padding: 5px;
+            float: left; 
+        }
+
+
+        .pp3sc-a {
+            background-image: url('media/pp3sc1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .pp3sc-b {
+            background-image: url('media/pp3sc2.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+
+.pp4sc {
+            width: 329px;
+            height: 315px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+            padding: 5px;
+            float: left; 
+        }
+
+
+        .pp4sc-a {
+            background-image: url('media/pp4sc1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .pp4sc-b {
+            background-image: url('media/pp4sc2.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+
+        .blank-icon:hover span {
+            display: block;
+        }
+
+         .blank-icon-d:hover span {
+            display: none;
+        }
+
+        
+
+        .security-labs-icon:hover span {
+            display: block;
+        }
+
+        /* Integrated blank icons with the main icons */
+        .blank-icon-a {
+            background-image: url('media/f1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .blank-icon-b {
+            background-image: url('media/f2.png'); /* Replace 'f2.png' with the actual path to your blank icon B image */
+        }
+
+        .blank-icon-c {
+            background-image: url('media/f3.png'); /* Replace 'f3.png' with the actual path to your blank icon C image */
+        }
+
+        .blank-icon-d {
+            background-image: url('media/f4.png'); /* Replace 'f4.png' with the actual path to your blank icon D image */
+        }
+
+/* sec labs 4 icons */
+
+      .security-labs-icon-a {
+            background-image: url('media/f1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        } 
+
+        .security-labs-icon-b {
+            background-image: url('media/f2.png'); /* Replace 'f2.png' with the actual path to your blank icon B image */
+        }     
+
+        .security-labs-icon-c {
+            background-image: url('media/f3.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+       /* .security-labs-icon-d {
+            background-image: url('media/f4.png'); 
+        } */
+
+/* per proj 4 icons */
+
+        .Personal-Projects-icon-a {
+            background-image: url('media/pass_gen.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .Personal-Projects-icon-b {
+            background-image: url('media/chatbot.png'); /* Replace 'f2.png' with the actual path to your blank icon B image */
+        }     
+
+        .Personal-Projects-icon-c {
+            background-image: url('media/safe.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .Personal-Projects-icon-d {
+            background-image: url('media/port60.png'); /* Replace 'f2.png' with the actual path to your blank icon B image */
+        } 
+
+        .grey-area {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 550px;
+            width: 800px;
+            background-color: rgba(63, 63, 68, 0.8); /* Transparent blurry gray color */
+            backdrop-filter: blur(10px); /* Blur effect */
+            display: none;
+            z-index: 999; /* Ensure it's above other elements */
+            padding: 20px; /* Add padding for spacing */
+            box-sizing: border-box; /* Include padding in width/height */
+            color: #808080; /* Gray text color */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+        .icon-fe {
+            width: 30px;
+            height: 30px;
+            background-image: url('media/fe.png'); /* Replace 'fe.png' with the actual path to your icon image */
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: inline-block;
+            margin-right: 5px; /* Add spacing between icon and text */
+        }
+
+
+    
+        .grey-content {
+            padding: 20px;
+            color: solid #fff;
+        }
+
+        .grey-area::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .grey-area::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 10px;
+    }
+
+    .grey-area::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+        .thin-line {
+            border-top: 1px solid #fff;
+            margin: 15px 0;
+        }
+
+        .tab {
+        height: 20px;
+        background-color: #333; /* Match the background color of the grey area */
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        position: absolute;
+        top: 2.5px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        font-weight: bold;
+        font-family: 'Arial', sans-serif;
+        z-index: 1; /* Ensure the tab is above the content */
+        border-radius: 1.25rem 1.25rem 0 0; /* Rounded corners */
+        
+             
+}
+
+     #tab-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            background-color: rgba(63, 63, 68, 0.8); /* Transparent blurry gray color */
+            z-index: 2;
+}
+
+video {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+
+video::-webkit-media-controls {
+            background-color: transparent;
+        }
+
+        video::-webkit-media-controls-timeline {
+            background-color: transparent;
+        }
+
+        video::-webkit-media-controls-current-time-display,
+        video::-webkit-media-controls-time-remaining-display {
+            color: white; /* Change this to your desired color */
+        }
+
+
+
+
+.btn { 
+     display: inline-block;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+}
+
+    </style>
+</head>
+
+<body>
+     
+    <div id="tab-container"></div>
+
+    <div id="datetime"></div>
+
+    <div id="icon-container">
+        <div class="icon icon-a" data-name="Resume"><span>Resume</span></div>
+        <div class="icon icon-c" data-name="Project/Labs"><span>Project/Labs</span></div>
+        
+
+    <div class="icon icon-d" data-name="GitHub" onclick="openGithubProfile()">
+        <span>GitHub</span>
+    </div>
+
+    <div class="icon icon-e" data-name="LinkedIn" onclick="openLinkedInProfile()">
+        <span>LinkedIn</span>
+    </div>
+        <div class="icon icon-b" data-name="About" onclick="toggleGreyArea()"><span>About</span></div>
+    </div>
+
+    <div class="blank-area">
+        
+        <div class="tab">Project/Labs</div>
+        <span class="close-button" onclick="closeBlankArea()">x</span>
+        <div class="blank-icon blank-icon-a" data-name="Personal Projects"><span>Personal Projects</span></div>
+        <div class="blank-icon blank-icon-b" data-name="Security Labs"><span>Security Labs</span></div>
+    </div>
+                                               
+ <div class="blank-area-2">
+        <div class="tab">Security Labs</div>
+        <span class="prev-button-2" onclick="prevBlankArea2()"><<</span>
+        <span class="close-button-2" onclick="closeBlankArea2()">x</span>
+      <div class="security-labs-icon security-labs-icon-a" data-name="Security lab 1"><span>Security Lab 1</span></div>
+        <div class="security-labs-icon security-labs-icon-b" data-name="Security Lab 2"><span>Security Lab 2</span></div>
+        <div class="security-labs-icon security-labs-icon-c" data-name="Security Lab 3"><span>Security Lab 3</span></div>
+        <div class="security-labs-icon security-labs-icon-d" data-name="Security Lab 4"></div>
+    </div>
+                                                 
+<div class="blank-area-3">
+        <div class="tab">Personal Projects</div>
+        <span class="prev-button-3" onclick="prevBlankArea3()"><<</span>
+        <span class="close-button-3" onclick="closeBlankArea3()">x</span>
+        
+        <div class="Personal-Projects-icon Personal-Projects-icon-a" data-name="Password Manager"><span>Password Manager</span></div>
+        <div class="Personal-Projects-icon Personal-Projects-icon-b" data-name="Jumia bot"><span>Jumia bot</span></div>
+        <div class="Personal-Projects-icon Personal-Projects-icon-c" data-name="QuickVault"><span>Quick Vault</span></div>
+        <div class="Personal-Projects-icon Personal-Projects-icon-d" data-name="Online Portfolio"><span>Online Portfolio</span></div>
+    </div> 
+
+<div class="per-pro-1">
+        <div class="tab">Personal Projects</div>
+        <span class="per-pro1-prev-button" onclick="prevper_pro_icon1()"><<</span>
+        <span class="per-pro1-close-button" onclick="closeper_pro_icon1()">x</span>
+        <div>
+            
+	   
+           <span style="color: #ffff; font-size: 40px;">Password Manager</span>
+            <hr style="border: 0.5px solid #808080; margin: 0; ">
+            <p style="color: #ffff; font-size: 15px; margin: 0;">Built with Python, Pip, & Tkinter - A Windows OS Application.</p>
+            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">A simple Password Manager that generates strong unguessable passwords, it also keeps track of all generated passwords including date and time the password was generated. </p>
+            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">See Screenshots below. </p> 
+             <div class="pp1sc pp1sc-a" data-name="security-labs1"></div> 
+             <div class="pp1sc pp1sc-b" data-name="security-labs1"></div>
+             <br>
+             <a class= "btn" href="https://github.com/4c3x/Password-Generator/tree/main" target="_blank">
+              View Code
+             </a>
+             <br>
+             <br>
+             <a class= "btn" href="https://drive.google.com/file/d/1yjkUZ9zKu5-kaZphaEUWVQClmLf8JB_j/view?usp=drive_link" target="_blank">
+              Download
+             </a>
+
+</div>   
+    </div>
+  </div>
+
+<div class="per-pro-2">
+        <div class="tab">Personal Projects</div>
+        <span class="per-pro1-prev-button" onclick="prevper_pro_icon2()"><<</span>
+        <span class="per-pro1-close-button" onclick="closeper_pro_icon2()">x</span>
+        <div>
+            <span style="color: #ffff; font-size: 40px;">Online Chatbot</span>
+            <hr style="border: 0.5px solid #808080; margin: 0; ">
+            <p style="color: #ffff; font-size: 15px; margin: 0;">Built with Dialogflow, Nodejs - A Messenger-based Application</p>
+            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">An interactive chatbotfor an e-commerce store, it displays available goods on the store, manages carts and handles trasnsactions. </p>
+            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">See Screenshots below. </p> 
+             <div class="pp2sc pp2sc-a" data-name="security-labs1"></div> 
+             <div class="pp2sc pp2sc-b" data-name="security-labs1"></div>
+               <br>
+             <a class= "btn" href="https://github.com/4c3x" target="_blank">
+              View Code
+             </a>
+             <br>
+             <br>
+             <a class= "btn" href="https://m.me/Jumiabot/" target="_blank">
+              Try it
+             </a>
+
+        </div>
+  </div>
+
+<div class="per-pro-3">
+        <div class="tab">Personal Projects</div>
+        <span class="per-pro1-prev-button" onclick="prevper_pro_icon3()"><<</span>
+        <span class="per-pro1-close-button" onclick="closeper_pro_icon3()">x</span>
+        <div>
+            <span style="color: #ffff; font-size: 40px;">QuickVault</span>
+            <hr style="border: 0.5px solid #808080; margin: 0; ">
+            <p style="color: #ffff; font-size: 15px; margin: 0;">Built with PHP, HTML, CSS, Javascript, Mysql - A Web-based application</p>
+            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;"> A fully functional Finacial web application, allows for transfer of funds between users</p>
+            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">Login details;  </p> 
+             <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">Username: 4c3xx  </p> 
+             <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">Password: 4c3xx  </p> 
+            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">See Screenshots below. </p> 
+            <p style="color: #ffff; font-size: 15px; margin-bottom: 2.5px;">Note: This is just a test web application. </p> 
+             <div class="pp3sc pp3sc-a" data-name="security-labs1"></div> 
+             <div class="pp3sc pp3sc-b" data-name="security-labs1"></div>
+              <br>
+             <a class= "btn" href="https://github.com/4c3x/QuickVault" target="_blank">
+              View Code
+             </a>
+             <br>
+             <br>
+             <a class= "btn" href="http://quickvault.atwebpages.com/customer_home.php" target="_blank">
+              Try it
+             </a>
+
+        </div>
+  </div>
+
+<div class="per-pro-4">
+        <div class="tab">Personal Projects</div>
+        <span class="per-pro1-prev-button" onclick="prevper_pro_icon4()"><<</span>
+        <span class="per-pro1-close-button" onclick="closeper_pro_icon4()">x</span>
+        <div>
+            <span style="color: #ffff; font-size: 40px;">Online Portfolio</span>
+            <hr style="border: 0.5px solid #808080; margin: 0; ">
+            <p style="color: #ffff; font-size: 15px; margin: 0;">Built with HTML, CSS & Javascript - A Web-based Application</p>
+            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;"> A creative, fully responsive portfolio, fashioned in the manner of traditional kali linux desktop</p>
+            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">See Screenshots below. </p> 
+             <div class="pp4sc pp4sc-a" data-name="security-labs1"></div> 
+             <div class="pp4sc pp4sc-b" data-name="security-labs1"></div>
+              <br>
+             <a class= "btn" href="https://sentry.io/answers/" target="_blank">
+              View Code
+             </a>
+            
+
+        </div>
+  </div>
+
+  <div class="sec-lab-1"> 
+        <div class="tab">Security Labs</div>
+        <span class="sec-lab1-prev-button" onclick="prevsec_lab_icon1()"><<</span>
+        <span class="sec-lab1-close-button" onclick="closesec_lab_icon1()">x</span>
+        <div>
+         <span style="color: #ffff; font-size: 40px;">Code Analysis</span>
+            <hr style="border: 0.5px solid #808080; margin: 0; ">
+            <p style="color: #ffff; font-size: 15px; margin: 0;">Tools Used - Synk, Github </p>
+            
+            <video width="320" height="200" controls>
+        <source src="media/vid2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+            
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 1: Fork the repository on Github</p>
+    
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 2: login to synk.io </p>
+
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 3: click on Add Project and select Github</p>
+
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 4: Search for the already forked Repo, select it then click on Add selected repositories</p>
+     
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 5: You will be redirected to your dashboard where you will see the added repository under targets</p>
+    
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Click on it and Review the information and decide on the appropriate actions to address the vulnerabilities.</p>
+  
+        </div>
+  </div> 
+
+<div class="sec-lab-2">
+        <div class="tab">Security Labs</div>
+        <span class="sec-lab1-prev-button" onclick="prevsec_lab_icon2()"><<</span>
+        <span class="sec-lab1-close-button" onclick="closesec_lab_icon2()">x</span>
+        <div>
+             <span style="color: #ffff; font-size: 40px;">Vulnerability Analysis</span>
+            <hr style="border: 0.5px solid #808080; margin: 0; ">
+            <p style="color: #ffff; font-size: 15px; margin: 0;">Tools Used - Acunetix</p>
+             <video width="320" height="200" controls>
+        <source src="media/vid3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+            
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 1: Login to Acunetix</p>
+    
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 2: Add a Target. In this case i use a web application created by myself due to privacy and permission issues </p>
+
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 3: Add scan configurations for the target</p>
+
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 4: Begin scan</p>
+     
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 5: After the scan is completed, View scan results</p>
+    
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 6: Generate report</p>
+  
+             
+        </div>
+  </div>
+
+<div class="sec-lab-3">
+        <div class="tab">Security Labs</div>
+        <span class="sec-lab1-prev-button" onclick="prevsec_lab_icon3()"><<</span>
+        <span class="sec-lab1-close-button" onclick="closesec_lab_icon3()">x</span>
+        <div>
+         <span style="color: #ffff; font-size: 40px;">Log Analysis</span>
+            <hr style="border: 0.5px solid #808080; margin: 0; ">
+            <p style="color: #ffff; font-size: 15px; margin: 0;">Tools Used - Azure Sentinel </p>
+            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;"> Vid not available </p>
+            <p style="color: #ffff; font-size: 20px; margin: 1;">Step 1: In the Azure Portal. search for "Azure Sentinel", and set up a new workspace </p>
+    
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 2: click on "Data connectors" and add data sources </p>
+
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 3: Click "connect" for each data source and configure the data connectors</p>
+
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 4: Go to "Logs" section, Use KQL (Kusto Query Language) to write simple queries to explore log data</p>
+     
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 5: Go to "Workbooks" section, create a new workbook to build visualizations based on your log data</p>
+    
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 6: Navigate to "Analytics" section, click on Rules and customize existing rules or create new rules </p>
+
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 7: Move to "Incidents" tab, set up incident rules, define incident types and workflows for incident management</p>
+
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 8: When there is an incident, head over to "Incidents" tab, select the incident and use the investigation tools to analyze and understand the situation</p>
+     
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 9: You can also create automated responses and define actions to mitigate potential threats in the "Playbooks" section.</p>
+        </div>
+  </div>
+
+<!-- <div class="sec-lab-4">
+        <div class="tab">Security Labs</div>
+        <span class="sec-lab1-prev-button" onclick="prevsec_lab_icon4()"><<</span>
+        <span class="sec-lab1-close-button" onclick="closesec_lab_icon4()">x</span>
+       <div>
+<span style="color: #ffff; font-size: 40px;">Network Analysis</span>
+            <hr style="border: 0.5px solid #808080; margin: 0; ">
+            <p style="color: #ffff; font-size: 15px; margin: 0;">Tools Used - Snort </p>
+            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;"> Vid, steps to acheive this</p>
+            <p style="color: #ffff; font-size: 20px; margin: 1;">Step 1: Fork the repository on Github</p>
+    
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 2: login to synk.io </p>
+
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 3: click on Add Project and select Github</p>
+
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 4: Search for the already forked Repo, select it then click on Add selected repositories</p>
+     
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 5: You will be redirected to your dashboard where you will see the added repository under targets</p>
+    
+    <p style="color: #ffff; font-size: 20px; margin: 1;">Click on it and Review the information and decide on the appropriate actions to address the vulnerabilities.</p>
+             
+        </div>
+  </div> -->
+                                       
+ <div class="grey-area">
+    <div style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <img src="media/fe.png" alt="Icon" style="width: 75px; height: 75px; margin-right: 10px;">
+        <div>
+            <span style="color: #ffff; font-size: 40px;">Dagus Ansi</span>
+            <p style="color: #ffff; font-size: 20px; margin: 0;">Cyber Security Analyst / Software Developer</p>
+        </div>
+    </div>
+    <hr style="border: 0.5px solid #808080; margin-bottom: 0px; ">
+    <p style="color: #ffff; font-size: 20px; margin: 10px 0;">dagusansi21@gmail.com | +2348062601396 </p>
+    <h2 style="color: #ffff; font-size: 30px; margin-bottom: 10px;">Experience</h2>
+    <hr style="border: 0.5px solid #808080; margin-bottom: 2.5px; ">
+    <p style="color: #ffff; font-size: 24px; margin-bottom: 2.5px;">MARCH 2021 - Present</p>
+    <p style="color: #ffff; font-size: 24px; margin: 0;">Aceworld Inc, Remote - Junior Software Developer</p>
+    <p style="color: #ffff; font-size: 20px; margin-bottom: 0;">
+       
+    Developed and maintained software applications using web development tools and frameworks such as Flask, Django, and Node.js for both frontend and backend. I debugged and resolved software defects, ensuring enhanced overall system functionality. Engaging in code reviews, I upheld adherence to best practices and industry standards, demonstrating proficiency in problem-solving, troubleshooting, and conducting source code analysis for security flaws.
+    </p>
+
+    <p style="color: #ffff; font-size: 24px; margin-bottom: 2.5px;">FEBRUARY 2023</p>
+    <p style="color: #ffff; font-size: 24px; margin: 0;">National Defence College Abuja, (Onsite) - Intern
+</p>
+    <p style="color: #ffff; font-size: 20px; margin-bottom: 10;">
+        Conducted vulnerability assessments, collaborated on remediation strategies, and responded to security incidents. Additionally, I contributed to configuring, monitoring security tools, and participated in regular audits to ensure industry standards compliance.
+    </p>
+     <h2 style="color: #ffff; font-size: 30px; margin-bottom: 10px;">Education</h2>
+     <hr style="border: 0.5px solid #808080; margin-bottom: 2.5px; ">
+     <p style="color: #ffff; font-size: 22px; margin-bottom: 2px;">B.Tech Cyber Security Science</p>
+     <p style="color: #ffff; font-size: 22px; margin: 0;">Federal University of Technology, Minna</p>
+     <h2 style="color: #ffff; font-size: 30px; margin-bottom: 10px;">Skills</h2>
+     <hr style="border: 0.5px solid #808080; margin-bottom: 2.5px; ">
+     <p style="color: #ffff; font-size: 20px; margin-bottom: 2px;">Coding</p>
+    <p style="color: #ffff; font-size: 20px; margin: 0;">Vulnerability Assessment</p>
+</div>
+
+    <div class="grey-area" onclick="stopPropagation()"></div>
+
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            var optionsDate = { year: 'numeric', month: 'short', day: 'numeric' };
+            var optionsTime = { hour: 'numeric', minute: 'numeric' };
+
+            var formattedDate = now.toLocaleString('en-US', optionsDate);
+            var formattedTime = now.toLocaleString('en-US', optionsTime);
+
+            document.getElementById('datetime').textContent = formattedTime + ' | ' + formattedDate;
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+
+        function toggleGreyArea() {
+            var greyArea = document.querySelector('.grey-area');
+            greyArea.style.display = (greyArea.style.display === 'none' || greyArea.style.display === '') ? 'block' : 'none';
+        }
+
+        function closeGreyArea() {
+            document.querySelector('.grey-area').style.display = 'none';
+        }
+
+        
+
+         function prevBlankArea2() {
+            document.querySelector('.blank-area-2').style.display = 'none';
+        }
+
+        function prevBlankArea3() {
+            document.querySelector('.blank-area-3').style.display = 'none';
+        }
+
+        function prevper_pro_icon1() {
+            document.querySelector('.per-pro-1').style.display = 'none';
+        }
+
+        function prevper_pro_icon2() {
+            document.querySelector('.per-pro-2').style.display = 'none';
+        }
+
+        function prevper_pro_icon3() {
+            document.querySelector('.per-pro-3').style.display = 'none';
+        }
+
+        function prevper_pro_icon4() {
+            document.querySelector('.per-pro-4').style.display = 'none';
+        }
+
+        function prevsec_lab_icon1() {
+            document.querySelector('.sec-lab-1').style.display = 'none';
+        }
+
+        function prevsec_lab_icon2() {
+            document.querySelector('.sec-lab-2').style.display = 'none';
+        }
+
+        function prevsec_lab_icon3() {
+            document.querySelector('.sec-lab-3').style.display = 'none';
+        }
+
+        function prevsec_lab_icon4() {
+            document.querySelector('.sec-lab-4').style.display = 'none';
+        }
+
+        document.querySelector('.icon-c').addEventListener('click', function () {
+            document.querySelector('.blank-area').style.display = 'flex';
+        });
+
+        // Add click event for the Personal Projects icon1
+        document.querySelector('.Personal-Projects-icon-a').addEventListener('click', function () {
+            document.querySelector('.per-pro-1').style.display = 'flex';
+        });
+
+        // Add click event for the Personal Projects icon2
+        document.querySelector('.Personal-Projects-icon-b').addEventListener('click', function () {
+            document.querySelector('.per-pro-2').style.display = 'flex';
+        });
+
+        // Add click event for the Personal Projects icon3
+        document.querySelector('.Personal-Projects-icon-c').addEventListener('click', function () {
+            document.querySelector('.per-pro-3').style.display = 'flex';
+        });
+
+        // Add click event for the Personal Projects icon4
+        document.querySelector('.Personal-Projects-icon-d').addEventListener('click', function () {
+            document.querySelector('.per-pro-4').style.display = 'flex';
+        });
+
+        // Add click event for the Security Labs icon1
+        document.querySelector('.security-labs-icon-a').addEventListener('click', function () {
+            document.querySelector('.sec-lab-1').style.display = 'flex';
+        });
+
+         // Add click event for the Security Labs icon2
+        document.querySelector('.security-labs-icon-b').addEventListener('click', function () {
+            document.querySelector('.sec-lab-2').style.display = 'flex';
+        });
+
+        // Add click event for the Security Labs icon3
+        document.querySelector('.security-labs-icon-c').addEventListener('click', function () {
+            document.querySelector('.sec-lab-3').style.display = 'flex';
+        });
+
+        // Add click event for the Security Labs icon4
+        document.querySelector('.security-labs-icon-d').addEventListener('click', function () {
+            document.querySelector('.sec-lab-4').style.display = 'flex';
+        });
+
+        // Add click event for the Security Labs icon
+        document.querySelector('.blank-icon-b').addEventListener('click', function () {
+            document.querySelector('.blank-area-2').style.display = 'flex';
+        });
+
+        // Add click event for the Personal Projects icon
+        document.querySelector('.blank-icon-a').addEventListener('click', function () {
+            document.querySelector('.blank-area-3').style.display = 'flex';
+        });
+       
+         function closeBlankArea2() {
+            document.querySelector('.blank-area').style.display = 'none';
+            document.querySelector('.blank-area-2').style.display = 'none';
+        } 
+
+ function closeBlankArea3() {
+            document.querySelector('.blank-area').style.display = 'none';
+            document.querySelector('.blank-area-3').style.display = 'none';
+        } 
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+       function closeper_pro_icon1() {
+            document.querySelector('.blank-area').style.display = 'none';
+            document.querySelector('.blank-area-3').style.display = 'none';
+            document.querySelector('.per-pro-1').style.display = 'none';
+        } 
+
+       function closeper_pro_icon2() {
+            document.querySelector('.blank-area').style.display = 'none';
+            document.querySelector('.blank-area-3').style.display = 'none';
+            document.querySelector('.per-pro-2').style.display = 'none';
+        }        
+
+       function closeper_pro_icon3() {
+            document.querySelector('.blank-area').style.display = 'none';
+            document.querySelector('.blank-area-3').style.display = 'none';
+            document.querySelector('.per-pro-3').style.display = 'none';
+        }  
+
+        function closeper_pro_icon4() {
+            document.querySelector('.blank-area').style.display = 'none';
+            document.querySelector('.blank-area-3').style.display = 'none';
+            document.querySelector('.per-pro-4').style.display = 'none';
+        }  
+
+       function closesec_lab_icon1() {
+            document.querySelector('.blank-area').style.display = 'none';
+            document.querySelector('.blank-area-2').style.display = 'none';
+            document.querySelector('.sec-lab-1').style.display = 'none';
+        }
+
+        function closesec_lab_icon2() {
+            document.querySelector('.blank-area').style.display = 'none';
+            document.querySelector('.blank-area-2').style.display = 'none';
+            document.querySelector('.sec-lab-2').style.display = 'none';
+        }
+
+        function closesec_lab_icon3() {
+            document.querySelector('.blank-area').style.display = 'none';
+            document.querySelector('.blank-area-2').style.display = 'none';
+            document.querySelector('.sec-lab-3').style.display = 'none';
+        }
+
+        function closesec_lab_icon4() {
+            document.querySelector('.blank-area').style.display = 'none';
+            document.querySelector('.blank-area-2').style.display = 'none';
+            document.querySelector('.sec-lab-4').style.display = 'none';
+        }
+
+        
+        function closeBlankArea() {
+            document.querySelector('.blank-area').style.display = 'none';
+        }
+
+        function stopPropagation() {
+            event.stopPropagation();
+        }
+
+        // Close grey area when clicking outside it
+        document.addEventListener('click', function (event) {
+            const greyArea = document.querySelector('.grey-area');
+            if (!event.target.closest('.grey-area') && !event.target.closest('.icon-b')) {
+                if (greyArea.style.display === 'block') {
+                    closeGreyArea();
+                }
+            }
+        });
+
+        function openLinkedInProfile() {
+            window.open('https://www.linkedin.com/in/ansi-dagus-a1837427b/', '_blank');
+        }
+        
+        function openGithubProfile() {
+            window.open('https://github.com/4c3x', '_blank');
+        }
+
+       
+  
+    </script>
+
+</body>
+
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
