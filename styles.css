@@ -1,0 +1,1238 @@
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('media/your-image.jpg'); /* Reference the image directly */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Set the height to fill the entire viewport */
+            width: 100vw;
+            font-family: 'Arial', sans-serif;
+            color: #000; /* Black font color */
+            position: relative;
+        }
+
+        #datetime {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            z-index: 2; /* Ensure the tab is above the content */
+        }
+
+        #icon-container {
+            position: absolute;
+            top: 50%; /* Center vertically */
+            left: 10px; /* Adjust as needed */
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column; /* Arrange icons vertically */
+        }
+
+        .icon {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            margin-bottom: 15px; /* Add space between icons */
+            cursor: pointer;
+            position: relative;
+        }
+
+        .icon span {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            background-color: #000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .icon:hover span {
+            display: block;
+        }
+
+        .icon-a {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            background-image: url('media/re.png'); /* Replace 're.png' with the actual path to your icon A image */
+            background-size: contain; /* Change from 'cover' to 'contain' */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent; /* Set the background color to transparent */
+        }
+
+        .icon-c {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            background-image: url('media/fo.png'); /* Replace 'fo.png' with the actual path to your icon C image with a transparent background */
+            background-size: contain; /* Change from 'cover' to 'contain' */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent; /* Set the background color to transparent */
+        }
+
+        .icon-d {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            background-image: url('media/gite.png'); /* Replace 'gite.png' with the actual path to your icon D image with a transparent background */
+            background-size: contain; /* Change from 'cover' to 'contain' */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent; /* Set the background color to transparent */
+        }
+
+        .icon-e {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            background-image: url('media/li.png'); /* Replace 'li.png' with the actual path to your icon E image with a transparent background */
+            background-size: contain; /* Change from 'cover' to 'contain' */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent; /* Set the background color to transparent */
+        }
+
+        .icon-b {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            background-image: url('media/wi.png'); /* Replace 'wi.png' with the actual path to your icon B image with a transparent background */
+            background-size: contain; /* Change from 'cover' to 'contain' */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent; /* Set the background color to transparent */
+        }
+
+        .blank-area {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 20px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+            
+        }
+
+        .blank-area-2 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 20px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+        .blank-area-3 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 20px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+  
+.per-pro-1 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+        
+
+    .per-pro-1::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .per-pro-1::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 20px;
+    }
+
+    .per-pro-1::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+
+
+.per-pro-2 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+        
+
+    .per-pro-2::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .per-pro-2::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 20px;
+    }
+
+    .per-pro-2::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+.per-pro-3 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+           
+        }
+
+
+        
+
+    .per-pro-3::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .per-pro-3::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 20px;
+    }
+
+    .per-pro-3::-webkit-scrollbar-track {
+        background-color: transparent;
+    }            
+
+
+.per-pro-4 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+        
+
+    .per-pro-4::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .per-pro-4::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 20px;
+    }
+
+    .per-pro-4::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+
+
+         .sec-lab-1 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+        overflow-y: auto; /* Make the content scrollable */
+        }
+
+    .sec-lab-1::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .sec-lab-1::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 5px;
+    }
+
+    .sec-lab-1::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+
+.sec-lab-2 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+    .sec-lab-2::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .sec-lab-2::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 5px;
+    }
+
+    .sec-lab-2::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+.sec-lab-3 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+    .sec-lab-3::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .sec-lab-3::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 5px;
+    }
+
+    .sec-lab-3::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+        .sec-lab-4 {
+            position: absolute;
+            top: 20%; /* Adjust as needed */
+            left: 20%; /* Adjust as needed */
+            width: 60%; /* Adjust as needed */
+            height: 60%; /* Adjust as needed */
+            backdrop-filter: blur(10px); /* Blur the background */
+            background-color: #333; /* Dark grey background color */
+            border: 0.5px solid #808080; /* Add a white border */
+            display: none;
+            justify-content: flex-start; /* Align items to the top left */
+            align-items: flex-start; /* Align items to the top left */
+            text-align: left; /* Align text to the left */
+            font-size: 24px;
+            color: #fff; /* White text color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding to give space for the logos */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+    .sec-lab-4::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .sec-lab-4::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 5px;
+    }
+
+    .sec-lab-4::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+
+        .prev-button-2 {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .prev-button-3 {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+
+
+        .prev-button-2:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .prev-button-3:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }        
+  
+.per-pro1-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+        
+        .per-pro1-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro2-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+        
+        .per-pro2-prev-button:hover {
+            background-color: grey; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro3-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+        
+        .per-pro3-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro4-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+        
+        .per-pro4-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+         .sec-lab1-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab1-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+ .sec-lab2-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab2-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+  .sec-lab3-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab3-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .sec-lab4-prev-button {
+            position: absolute;
+            top: 2.25px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #000000;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab4-prev-button:hover {
+            background-color: gray; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .logo {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .icon-name {
+            font-size: 14px; /* Make font size smaller */
+        }
+
+        .close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+     
+        .close-button-2 {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .close-button-2:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .close-button-3 {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .close-button-3:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro1-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .per-pro1-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro2-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .per-pro2-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro3-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .per-pro3-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.per-pro4-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .per-pro4-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+          .sec-lab1-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab1-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+
+ .sec-lab2-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab2-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+.sec-lab3-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab3-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .sec-lab4-close-button {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffff;
+            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            z-index: 1; /* Ensure the close button is above the tab */
+        }
+
+        .sec-lab4-close-button:hover {
+            background-color: red; /* Change the background color on hover */
+            border-radius: 25%; /* Make it a circle */
+            padding: 2px; /* Adjust as needed */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+
+        /* New classes for icons in the blank area */
+        .blank-icon {
+            width: 44px;
+            height: 44px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+        }
+
+         
+
+        .blank-icon span {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+         .Personal-Projects-icon {
+            width: 44px;
+            height: 44px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+        }
+
+         .Personal-Projects-icon span {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+.security-labs-icon {
+            width: 44px;
+            height: 44px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+        }
+
+         .security-labs-icon span {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .pp1sc {
+            width: 369px;
+            height: 377px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+            padding: 5px;
+            float: left; 
+        }
+
+
+        .pp1sc-a {
+            background-image: url('media/pp1sc1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .pp1sc-b {
+            background-image: url('media/pp1sc2.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+
+.pp2sc {
+            width: 369px;
+            height: 370px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+            padding: 5px;
+            float: left; 
+        }
+
+
+        .pp2sc-a {
+            background-image: url('media/pp2sc1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .pp2sc-b {
+            background-image: url('media/pp2sc2.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+.pp3sc {
+            width: 360px;
+            height: 377px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+            padding: 5px;
+            float: left; 
+        }
+
+
+        .pp3sc-a {
+            background-image: url('media/pp3sc1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .pp3sc-b {
+            background-image: url('media/pp3sc2.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+
+.pp4sc {
+            width: 329px;
+            height: 315px;
+            margin-right: 25px;
+            cursor: pointer;
+            position: relative;
+            padding: 5px;
+            float: left; 
+        }
+
+
+        .pp4sc-a {
+            background-image: url('media/pp4sc1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .pp4sc-b {
+            background-image: url('media/pp4sc2.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+
+        .blank-icon:hover span {
+            display: block;
+        }
+
+         .blank-icon-d:hover span {
+            display: none;
+        }
+
+        
+
+        .security-labs-icon:hover span {
+            display: block;
+        }
+
+        /* Integrated blank icons with the main icons */
+        .blank-icon-a {
+            background-image: url('media/f1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .blank-icon-b {
+            background-image: url('media/f2.png'); /* Replace 'f2.png' with the actual path to your blank icon B image */
+        }
+
+        .blank-icon-c {
+            background-image: url('media/f3.png'); /* Replace 'f3.png' with the actual path to your blank icon C image */
+        }
+
+        .blank-icon-d {
+            background-image: url('media/f4.png'); /* Replace 'f4.png' with the actual path to your blank icon D image */
+        }
+
+/* sec labs 4 icons */
+
+      .security-labs-icon-a {
+            background-image: url('media/f1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        } 
+
+        .security-labs-icon-b {
+            background-image: url('media/f2.png'); /* Replace 'f2.png' with the actual path to your blank icon B image */
+        }     
+
+        .security-labs-icon-c {
+            background-image: url('media/f3.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+       /* .security-labs-icon-d {
+            background-image: url('media/f4.png'); 
+        } */
+
+/* per proj 4 icons */
+
+        .Personal-Projects-icon-a {
+            background-image: url('media/pass_gen.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .Personal-Projects-icon-b {
+            background-image: url('media/chatbot.png'); /* Replace 'f2.png' with the actual path to your blank icon B image */
+        }     
+
+        .Personal-Projects-icon-c {
+            background-image: url('media/safe.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+        }
+
+        .Personal-Projects-icon-d {
+            background-image: url('media/port60.png'); /* Replace 'f2.png' with the actual path to your blank icon B image */
+        } 
+
+        .grey-area {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 550px;
+            width: 800px;
+            background-color: rgba(63, 63, 68, 0.8); /* Transparent blurry gray color */
+            backdrop-filter: blur(10px); /* Blur effect */
+            display: none;
+            z-index: 999; /* Ensure it's above other elements */
+            padding: 20px; /* Add padding for spacing */
+            box-sizing: border-box; /* Include padding in width/height */
+            color: #808080; /* Gray text color */
+            overflow-y: auto; /* Make the content scrollable */
+        }
+
+        .icon-fe {
+            width: 30px;
+            height: 30px;
+            background-image: url('media/fe.png'); /* Replace 'fe.png' with the actual path to your icon image */
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: inline-block;
+            margin-right: 5px; /* Add spacing between icon and text */
+        }
+
+
+    
+        .grey-content {
+            padding: 20px;
+            color: solid #fff;
+        }
+
+        .grey-area::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .grey-area::-webkit-scrollbar-thumb {
+        background-color: #808080; /* Grey color similar to default scrollbar */
+        border-radius: 10px;
+    }
+
+    .grey-area::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+        .thin-line {
+            border-top: 1px solid #fff;
+            margin: 15px 0;
+        }
+
+        .tab {
+        height: 20px;
+        background-color: #333; /* Match the background color of the grey area */
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        position: absolute;
+        top: 2.5px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        font-weight: bold;
+        font-family: 'Arial', sans-serif;
+        z-index: 1; /* Ensure the tab is above the content */
+        border-radius: 1.25rem 1.25rem 0 0; /* Rounded corners */
+        
+             
+}
+
+     #tab-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            background-color: rgba(63, 63, 68, 0.8); /* Transparent blurry gray color */
+            z-index: 2;
+}
+
+video {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+
+video::-webkit-media-controls {
+            background-color: transparent;
+        }
+
+        video::-webkit-media-controls-timeline {
+            background-color: transparent;
+        }
+
+        video::-webkit-media-controls-current-time-display,
+        video::-webkit-media-controls-time-remaining-display {
+            color: white; /* Change this to your desired color */
+        }
+
+
+
+
+.btn { 
+     display: inline-block;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+}
+
+    
