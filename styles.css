@@ -2,14 +2,14 @@
         body {
             margin: 0;
             padding: 0;
-            background-image: url('media/your-image.jpg'); /* Reference the image directly */
+            background-image: url('media/your-image.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh; /* Set the height to fill the entire viewport */
+            height: 100vh; 
             width: 100vw;
             font-family: 'Arial', sans-serif;
-            color: #000; /* Black font color */
+            color: #000; 
             position: relative;
         }
 
@@ -20,22 +20,22 @@
             font-size: 16px;
             font-family: 'Arial', sans-serif;
             color: #fff;
-            z-index: 2; /* Ensure the tab is above the content */
+            z-index: 2; 
         }
 
         #icon-container {
             position: absolute;
-            top: 50%; /* Center vertically */
-            left: 10px; /* Adjust as needed */
+            top: 50%; 
+            left: 10px; 
             transform: translateY(-50%);
             display: flex;
-            flex-direction: column; /* Arrange icons vertically */
+            flex-direction: column; 
         }
 
         .icon {
-            width: 40px; /* Adjust as needed */
-            height: 40px; /* Adjust as needed */
-            margin-bottom: 15px; /* Add space between icons */
+            width: 40px; 
+            height: 40px; 
+            margin-bottom: 15px; 
             cursor: pointer;
             position: relative;
         }
@@ -58,134 +58,134 @@
         }
 
         .icon-a {
-            width: 40px; /* Adjust as needed */
-            height: 40px; /* Adjust as needed */
-            background-image: url('media/re.png'); /* Replace 're.png' with the actual path to your icon A image */
-            background-size: contain; /* Change from 'cover' to 'contain' */
+            width: 40px; 
+            height: 40px; 
+            background-image: url('media/re.png'); 
+            background-size: contain; 
             background-position: center;
             background-repeat: no-repeat;
-            background-color: transparent; /* Set the background color to transparent */
+            background-color: transparent; 
         }
 
         .icon-c {
-            width: 40px; /* Adjust as needed */
-            height: 40px; /* Adjust as needed */
-            background-image: url('media/fo.png'); /* Replace 'fo.png' with the actual path to your icon C image with a transparent background */
-            background-size: contain; /* Change from 'cover' to 'contain' */
+            width: 40px; 
+            height: 40px; 
+            background-image: url('media/fo.png');  
+            background-size: contain; 
             background-position: center;
             background-repeat: no-repeat;
-            background-color: transparent; /* Set the background color to transparent */
+            background-color: transparent; 
         }
 
         .icon-d {
-            width: 40px; /* Adjust as needed */
-            height: 40px; /* Adjust as needed */
-            background-image: url('media/gite.png'); /* Replace 'gite.png' with the actual path to your icon D image with a transparent background */
-            background-size: contain; /* Change from 'cover' to 'contain' */
+            width: 40px;
+            height: 40px; 
+            background-image: url('media/gite.png'); 
+            background-size: contain; 
             background-position: center;
             background-repeat: no-repeat;
-            background-color: transparent; /* Set the background color to transparent */
+            background-color: transparent; 
         }
 
         .icon-e {
-            width: 40px; /* Adjust as needed */
-            height: 40px; /* Adjust as needed */
-            background-image: url('media/li.png'); /* Replace 'li.png' with the actual path to your icon E image with a transparent background */
-            background-size: contain; /* Change from 'cover' to 'contain' */
+            width: 40px; 
+            height: 40px; 
+            background-image: url('media/li.png'); 
+            background-size: contain; 
             background-position: center;
             background-repeat: no-repeat;
-            background-color: transparent; /* Set the background color to transparent */
+            background-color: transparent; 
         }
 
         .icon-b {
-            width: 40px; /* Adjust as needed */
-            height: 40px; /* Adjust as needed */
-            background-image: url('media/wi.png'); /* Replace 'wi.png' with the actual path to your icon B image with a transparent background */
-            background-size: contain; /* Change from 'cover' to 'contain' */
+            width: 40px; 
+            height: 40px; 
+            background-image: url('media/wi.png'); 
+            background-size: contain; 
             background-position: center;
             background-repeat: no-repeat;
-            background-color: transparent; /* Set the background color to transparent */
+            background-color: transparent; 
         }
 
         .blank-area {
             position: absolute;
-            top: 20%; /* Adjust as needed */
-            left: 20%; /* Adjust as needed */
-            width: 60%; /* Adjust as needed */
-            height: 60%; /* Adjust as needed */
-            backdrop-filter: blur(10px); /* Blur the background */
-            background-color: #333; /* Dark grey background color */
-            border: 0.5px solid #808080; /* Add a white border */
+            top: 20%; 
+            left: 20%; 
+            width: 60%; 
+            height: 60%; 
+            backdrop-filter: blur(10px); 
+            background-color: #333; 
+            border: 0.5px solid #808080; 
             display: none;
-            justify-content: flex-start; /* Align items to the top left */
-            align-items: flex-start; /* Align items to the top left */
-            text-align: left; /* Align text to the left */
+            justify-content: flex-start;
+            align-items: flex-start; 
+            text-align: left; 
             font-size: 24px;
-            color: #fff; /* White text color */
-            border-radius: 20px; /* Rounded corners */
-            padding: 20px; /* Add padding to give space for the logos */
+            color: #fff; 
+            border-radius: 20px; 
+            padding: 20px; 
             overflow-y: auto; /* Make the content scrollable */
             
         }
 
         .blank-area-2 {
             position: absolute;
-            top: 20%; /* Adjust as needed */
-            left: 20%; /* Adjust as needed */
-            width: 60%; /* Adjust as needed */
-            height: 60%; /* Adjust as needed */
+            top: 20%; 
+            left: 20%; 
+            width: 60%; 
+            height: 60%; 
             backdrop-filter: blur(10px); /* Blur the background */
-            background-color: #333; /* Dark grey background color */
-            border: 0.5px solid #808080; /* Add a white border */
+            background-color: #333; 
+            border: 0.5px solid #808080; 
             display: none;
-            justify-content: flex-start; /* Align items to the top left */
-            align-items: flex-start; /* Align items to the top left */
-            text-align: left; /* Align text to the left */
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            text-align: left; 
             font-size: 24px;
-            color: #fff; /* White text color */
-            border-radius: 20px; /* Rounded corners */
-            padding: 20px; /* Add padding to give space for the logos */
+            color: #fff; 
+            border-radius: 20px; 
+            padding: 20px; 
             overflow-y: auto; /* Make the content scrollable */
         }
 
         .blank-area-3 {
             position: absolute;
-            top: 20%; /* Adjust as needed */
-            left: 20%; /* Adjust as needed */
-            width: 60%; /* Adjust as needed */
-            height: 60%; /* Adjust as needed */
+            top: 20%; 
+            left: 20%; 
+            width: 60%; 
+            height: 60%; 
             backdrop-filter: blur(10px); /* Blur the background */
-            background-color: #333; /* Dark grey background color */
-            border: 0.5px solid #808080; /* Add a white border */
+            background-color: #333; 
+            border: 0.5px solid #808080; 
             display: none;
-            justify-content: flex-start; /* Align items to the top left */
-            align-items: flex-start; /* Align items to the top left */
-            text-align: left; /* Align text to the left */
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            text-align: left; 
             font-size: 24px;
-            color: #fff; /* White text color */
-            border-radius: 20px; /* Rounded corners */
-            padding: 20px; /* Add padding to give space for the logos */
+            color: #fff; 
+            border-radius: 20px; 
+            padding: 20px; 
             overflow-y: auto; /* Make the content scrollable */
         }
   
 .per-pro-1 {
             position: absolute;
-            top: 20%; /* Adjust as needed */
-            left: 20%; /* Adjust as needed */
-            width: 60%; /* Adjust as needed */
-            height: 60%; /* Adjust as needed */
-            backdrop-filter: blur(10px); /* Blur the background */
-            background-color: #333; /* Dark grey background color */
-            border: 0.5px solid #808080; /* Add a white border */
+            top: 20%; 
+            left: 20%; 
+            width: 60%; 
+            height: 60%;
+            backdrop-filter: blur(10px); 
+            background-color: #333; 
+            border: 0.5px solid #808080; 
             display: none;
-            justify-content: flex-start; /* Align items to the top left */
-            align-items: flex-start; /* Align items to the top left */
-            text-align: left; /* Align text to the left */
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            text-align: left; 
             font-size: 24px;
-            color: #fff; /* White text color */
-            border-radius: 8px; /* Rounded corners */
-            padding: 20px; /* Add padding to give space for the logos */
-            overflow-y: auto; /* Make the content scrollable */
+            color: #fff; 
+            border-radius: 8px; 
+            padding: 20px; 
+            overflow-y: auto; 
         }
 
         
@@ -207,22 +207,22 @@
 
 .per-pro-2 {
             position: absolute;
-            top: 20%; /* Adjust as needed */
-            left: 20%; /* Adjust as needed */
-            width: 60%; /* Adjust as needed */
-            height: 60%; /* Adjust as needed */
-            backdrop-filter: blur(10px); /* Blur the background */
-            background-color: #333; /* Dark grey background color */
-            border: 0.5px solid #808080; /* Add a white border */
+            top: 20%; 
+            left: 20%; 
+            width: 60%; 
+            height: 60%;
+            backdrop-filter: blur(10px); 
+            background-color: #333; 
+            border: 0.5px solid #808080; 
             display: none;
-            justify-content: flex-start; /* Align items to the top left */
-            align-items: flex-start; /* Align items to the top left */
-            text-align: left; /* Align text to the left */
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            text-align: left; 
             font-size: 24px;
-            color: #fff; /* White text color */
-            border-radius: 8px; /* Rounded corners */
-            padding: 20px; /* Add padding to give space for the logos */
-            overflow-y: auto; /* Make the content scrollable */
+            color: #fff; 
+            border-radius: 8px; 
+            padding: 20px; 
+            overflow-y: auto; 
         }
 
         
@@ -242,22 +242,22 @@
 
 .per-pro-3 {
             position: absolute;
-            top: 20%; /* Adjust as needed */
-            left: 20%; /* Adjust as needed */
-            width: 60%; /* Adjust as needed */
-            height: 60%; /* Adjust as needed */
-            backdrop-filter: blur(10px); /* Blur the background */
-            background-color: #333; /* Dark grey background color */
-            border: 0.5px solid #808080; /* Add a white border */
+            top: 20%; 
+            left: 20%; 
+            width: 60%; 
+            height: 60%; 
+            backdrop-filter: blur(10px); 
+            background-color: #333; 
+            border: 0.5px solid #808080; 
             display: none;
-            justify-content: flex-start; /* Align items to the top left */
-            align-items: flex-start; /* Align items to the top left */
-            text-align: left; /* Align text to the left */
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            text-align: left; 
             font-size: 24px;
-            color: #fff; /* White text color */
-            border-radius: 8px; /* Rounded corners */
-            padding: 20px; /* Add padding to give space for the logos */
-            overflow-y: auto; /* Make the content scrollable */
+            color: #fff; 
+            border-radius: 8px; 
+            padding: 20px; 
+            overflow-y: auto; 
            
         }
 
@@ -269,7 +269,7 @@
     }
 
     .per-pro-3::-webkit-scrollbar-thumb {
-        background-color: #808080; /* Grey color similar to default scrollbar */
+        background-color: #808080; 
         border-radius: 20px;
     }
 
@@ -280,21 +280,21 @@
 
 .per-pro-4 {
             position: absolute;
-            top: 20%; /* Adjust as needed */
-            left: 20%; /* Adjust as needed */
-            width: 60%; /* Adjust as needed */
-            height: 60%; /* Adjust as needed */
-            backdrop-filter: blur(10px); /* Blur the background */
-            background-color: #333; /* Dark grey background color */
-            border: 0.5px solid #808080; /* Add a white border */
+            top: 20%; 
+            left: 20%; 
+            width: 60%; 
+            height: 60%; 
+            backdrop-filter: blur(10px); 
+            background-color: #333; 
+            border: 0.5px solid #808080; 
             display: none;
-            justify-content: flex-start; /* Align items to the top left */
-            align-items: flex-start; /* Align items to the top left */
-            text-align: left; /* Align text to the left */
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            text-align: left; 
             font-size: 24px;
-            color: #fff; /* White text color */
+            color: #fff; 
             border-radius: 8px; /* Rounded corners */
-            padding: 20px; /* Add padding to give space for the logos */
+            padding: 20px; 
             overflow-y: auto; /* Make the content scrollable */
         }
 
@@ -317,21 +317,21 @@
 
          .sec-lab-1 {
             position: absolute;
-            top: 20%; /* Adjust as needed */
-            left: 20%; /* Adjust as needed */
-            width: 60%; /* Adjust as needed */
-            height: 60%; /* Adjust as needed */
-            backdrop-filter: blur(10px); /* Blur the background */
-            background-color: #333; /* Dark grey background color */
-            border: 0.5px solid #808080; /* Add a white border */
+            top: 20%; 
+            left: 20%; 
+            width: 60%; 
+            height: 60%; 
+            backdrop-filter: blur(10px); 
+            background-color: #333; 
+            border: 0.5px solid #808080; 
             display: none;
-            justify-content: flex-start; /* Align items to the top left */
-            align-items: flex-start; /* Align items to the top left */
-            text-align: left; /* Align text to the left */
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            text-align: left; 
             font-size: 24px;
-            color: #fff; /* White text color */
+            color: #fff; 
             border-radius: 8px; /* Rounded corners */
-            padding: 20px; /* Add padding to give space for the logos */
+            padding: 20px; 
         overflow-y: auto; /* Make the content scrollable */
         }
 
@@ -351,22 +351,22 @@
 
 .sec-lab-2 {
             position: absolute;
-            top: 20%; /* Adjust as needed */
-            left: 20%; /* Adjust as needed */
-            width: 60%; /* Adjust as needed */
-            height: 60%; /* Adjust as needed */
-            backdrop-filter: blur(10px); /* Blur the background */
-            background-color: #333; /* Dark grey background color */
-            border: 0.5px solid #808080; /* Add a white border */
+            top: 20%; 
+            left: 20%; 
+            width: 60%; 
+            height: 60%; 
+            backdrop-filter: blur(10px); 
+            background-color: #333; 
+            border: 0.5px solid #808080; 
             display: none;
-            justify-content: flex-start; /* Align items to the top left */
-            align-items: flex-start; /* Align items to the top left */
-            text-align: left; /* Align text to the left */
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            text-align: left; 
             font-size: 24px;
-            color: #fff; /* White text color */
-            border-radius: 8px; /* Rounded corners */
-            padding: 20px; /* Add padding to give space for the logos */
-            overflow-y: auto; /* Make the content scrollable */
+            color: #fff; 
+            border-radius: 8px; 
+            padding: 20px; 
+            overflow-y: auto; 
         }
 
     .sec-lab-2::-webkit-scrollbar {
@@ -374,7 +374,7 @@
     }
 
     .sec-lab-2::-webkit-scrollbar-thumb {
-        background-color: #808080; /* Grey color similar to default scrollbar */
+        background-color: #808080; 
         border-radius: 5px;
     }
 
@@ -384,22 +384,22 @@
 
 .sec-lab-3 {
             position: absolute;
-            top: 20%; /* Adjust as needed */
-            left: 20%; /* Adjust as needed */
-            width: 60%; /* Adjust as needed */
-            height: 60%; /* Adjust as needed */
-            backdrop-filter: blur(10px); /* Blur the background */
-            background-color: #333; /* Dark grey background color */
-            border: 0.5px solid #808080; /* Add a white border */
+            top: 20%; 
+            left: 20%; 
+            width: 60%; 
+            height: 60%;
+            backdrop-filter: blur(10px); 
+            background-color: #333; 
+            border: 0.5px solid #808080; 
             display: none;
-            justify-content: flex-start; /* Align items to the top left */
-            align-items: flex-start; /* Align items to the top left */
-            text-align: left; /* Align text to the left */
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            text-align: left; 
             font-size: 24px;
-            color: #fff; /* White text color */
-            border-radius: 8px; /* Rounded corners */
-            padding: 20px; /* Add padding to give space for the logos */
-            overflow-y: auto; /* Make the content scrollable */
+            color: #fff; 
+            border-radius: 8px; 
+            padding: 20px; 
+            overflow-y: auto;
         }
 
     .sec-lab-3::-webkit-scrollbar {
@@ -407,7 +407,7 @@
     }
 
     .sec-lab-3::-webkit-scrollbar-thumb {
-        background-color: #808080; /* Grey color similar to default scrollbar */
+        background-color: #808080; 
         border-radius: 5px;
     }
 
@@ -417,19 +417,19 @@
 
         .sec-lab-4 {
             position: absolute;
-            top: 20%; /* Adjust as needed */
-            left: 20%; /* Adjust as needed */
-            width: 60%; /* Adjust as needed */
-            height: 60%; /* Adjust as needed */
+            top: 20%; 
+            left: 20%; 
+            width: 60%; 
+            height: 60%; 
             backdrop-filter: blur(10px); /* Blur the background */
-            background-color: #333; /* Dark grey background color */
-            border: 0.5px solid #808080; /* Add a white border */
+            background-color: #333; 
+            border: 0.5px solid #808080; 
             display: none;
-            justify-content: flex-start; /* Align items to the top left */
-            align-items: flex-start; /* Align items to the top left */
-            text-align: left; /* Align text to the left */
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            text-align: left; 
             font-size: 24px;
-            color: #fff; /* White text color */
+            color: #fff; 
             border-radius: 8px; /* Rounded corners */
             padding: 20px; /* Add padding to give space for the logos */
             overflow-y: auto; /* Make the content scrollable */
@@ -469,10 +469,10 @@
             cursor: pointer;
             font-size: 15px;
             color: #000000;
-            transition: background-color 0.3s; /* Add a transition for smooth color change */
+            transition: background-color 0.3s; 
             font-weight: bold;
             font-family: 'Arial', sans-serif;
-            z-index: 1; /* Ensure the close button is above the tab */
+            z-index: 1; 
         }
 
 
@@ -480,7 +480,7 @@
         .prev-button-2:hover {
             background-color: gray; /* Change the background color on hover */
             border-radius: 25%; /* Make it a circle */
-            padding: 2px; /* Adjust as needed */
+            padding: 2px; 
             font-weight: bold;
             font-family: 'Arial', sans-serif;
         }
@@ -488,7 +488,7 @@
         .prev-button-3:hover {
             background-color: gray; /* Change the background color on hover */
             border-radius: 25%; /* Make it a circle */
-            padding: 2px; /* Adjust as needed */
+            padding: 2px; 
             font-weight: bold;
             font-family: 'Arial', sans-serif;
         }        
@@ -509,7 +509,7 @@
         .per-pro1-prev-button:hover {
             background-color: gray; /* Change the background color on hover */
             border-radius: 25%; /* Make it a circle */
-            padding: 2px; /* Adjust as needed */
+            padding: 2px; 
             font-weight: bold;
             font-family: 'Arial', sans-serif;
         }
@@ -530,7 +530,7 @@
         .per-pro2-prev-button:hover {
             background-color: grey; /* Change the background color on hover */
             border-radius: 25%; /* Make it a circle */
-            padding: 2px; /* Adjust as needed */
+            padding: 2px; 
             font-weight: bold;
             font-family: 'Arial', sans-serif;
         }
@@ -551,7 +551,7 @@
         .per-pro3-prev-button:hover {
             background-color: gray; /* Change the background color on hover */
             border-radius: 25%; /* Make it a circle */
-            padding: 2px; /* Adjust as needed */
+            padding: 2px; 
             font-weight: bold;
             font-family: 'Arial', sans-serif;
         }
@@ -668,7 +668,7 @@
         }
 
         .icon-name {
-            font-size: 14px; /* Make font size smaller */
+            font-size: 14px; 
         }
 
         .close-button {
@@ -899,13 +899,13 @@
         .sec-lab4-close-button:hover {
             background-color: red; /* Change the background color on hover */
             border-radius: 25%; /* Make it a circle */
-            padding: 2px; /* Adjust as needed */
+            padding: 2px; 
             font-weight: bold;
             font-family: 'Arial', sans-serif;
         }
 
 
-        /* New classes for icons in the blank area */
+       
         .blank-icon {
             width: 44px;
             height: 44px;
@@ -980,11 +980,11 @@
 
 
         .pp1sc-a {
-            background-image: url('media/pp1sc1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/pp1sc1.png'); 
         }
 
         .pp1sc-b {
-            background-image: url('media/pp1sc2.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/pp1sc2.png'); 
         }
 
 
@@ -1000,11 +1000,11 @@
 
 
         .pp2sc-a {
-            background-image: url('media/pp2sc1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/pp2sc1.png'); 
         }
 
         .pp2sc-b {
-            background-image: url('media/pp2sc2.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/pp2sc2.png'); 
         }
 
 .pp3sc {
@@ -1019,11 +1019,11 @@
 
 
         .pp3sc-a {
-            background-image: url('media/pp3sc1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/pp3sc1.png'); 
         }
 
         .pp3sc-b {
-            background-image: url('media/pp3sc2.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/pp3sc2.png'); 
         }
 
 
@@ -1039,11 +1039,11 @@
 
 
         .pp4sc-a {
-            background-image: url('media/pp4sc1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/pp4sc1.png'); 
         }
 
         .pp4sc-b {
-            background-image: url('media/pp4sc2.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/pp4sc2.png'); 
         }
 
 
@@ -1063,55 +1063,53 @@
 
         /* Integrated blank icons with the main icons */
         .blank-icon-a {
-            background-image: url('media/f1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/f1.png'); 
         }
 
         .blank-icon-b {
-            background-image: url('media/f2.png'); /* Replace 'f2.png' with the actual path to your blank icon B image */
+            background-image: url('media/f2.png'); 
         }
 
         .blank-icon-c {
-            background-image: url('media/f3.png'); /* Replace 'f3.png' with the actual path to your blank icon C image */
+            background-image: url('media/f3.png'); 
         }
 
         .blank-icon-d {
-            background-image: url('media/f4.png'); /* Replace 'f4.png' with the actual path to your blank icon D image */
+            background-image: url('media/f4.png'); 
         }
 
-/* sec labs 4 icons */
-
       .security-labs-icon-a {
-            background-image: url('media/f1.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/f1.png'); 
         } 
 
         .security-labs-icon-b {
-            background-image: url('media/f2.png'); /* Replace 'f2.png' with the actual path to your blank icon B image */
+            background-image: url('media/f2.png'); 
         }     
 
         .security-labs-icon-c {
-            background-image: url('media/f3.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/f3.png'); 
         }
 
        /* .security-labs-icon-d {
             background-image: url('media/f4.png'); 
         } */
 
-/* per proj 4 icons */
+
 
         .Personal-Projects-icon-a {
-            background-image: url('media/pass_gen.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/pass_gen.png'); 
         }
 
         .Personal-Projects-icon-b {
-            background-image: url('media/chatbot.png'); /* Replace 'f2.png' with the actual path to your blank icon B image */
+            background-image: url('media/chatbot.png'); 
         }     
 
         .Personal-Projects-icon-c {
-            background-image: url('media/safe.png'); /* Replace 'f1.png' with the actual path to your blank icon A image */
+            background-image: url('media/safe.png');
         }
 
         .Personal-Projects-icon-d {
-            background-image: url('media/port60.png'); /* Replace 'f2.png' with the actual path to your blank icon B image */
+            background-image: url('media/port60.png'); 
         } 
 
         .grey-area {
@@ -1126,19 +1124,19 @@
             z-index: 999; /* Ensure it's above other elements */
             padding: 20px; /* Add padding for spacing */
             box-sizing: border-box; /* Include padding in width/height */
-            color: #808080; /* Gray text color */
+            color: #808080; 
             overflow-y: auto; /* Make the content scrollable */
         }
 
         .icon-fe {
             width: 30px;
             height: 30px;
-            background-image: url('media/fe.png'); /* Replace 'fe.png' with the actual path to your icon image */
+            background-image: url('media/fe.png'); 
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
             display: inline-block;
-            margin-right: 5px; /* Add spacing between icon and text */
+            margin-right: 5px; 
         }
 
 
@@ -1153,7 +1151,7 @@
     }
 
     .grey-area::-webkit-scrollbar-thumb {
-        background-color: #808080; /* Grey color similar to default scrollbar */
+        background-color: #808080; 
         border-radius: 10px;
     }
 
@@ -1168,7 +1166,7 @@
 
         .tab {
         height: 20px;
-        background-color: #333; /* Match the background color of the grey area */
+        background-color: #333; 
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
         position: absolute;
@@ -1213,7 +1211,7 @@ video::-webkit-media-controls {
 
         video::-webkit-media-controls-current-time-display,
         video::-webkit-media-controls-time-remaining-display {
-            color: white; /* Change this to your desired color */
+            color: white; 
         }
 
 
@@ -1233,6 +1231,4 @@ video::-webkit-media-controls {
       justify-content: flex-end;
       align-items: center;
       position: relative;
-}
-
-    
+}  
