@@ -204,6 +204,6 @@ function updateDateTime() {
         }
          
         function openResume() {
-            window.open('https://drive.google.com/file/d/1L_QykaimfkBnejvrgI5Tu532Xt2ojRHt/view?usp=drivesdk', '_blank');
+            window.open('https://drive.google.com/file/d/10Up7bBRJz3DfPwgRY5TBNwrvMkyVY8iv/view?usp=drivesdk', '_blank');
         }
        
