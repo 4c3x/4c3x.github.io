@@ -12,334 +12,190 @@
 </head>
 
 <body>
+<nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education & Certifications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <!--  left side -->
+    <div class="binary-bg"></div>
+
+    <header>
+        <h1>Dagus Ansi</h1>
+        <p>Cybersecurity Analyst</p>
+        <p class="tagline" id="tagline">Securing the Future, One Byte at a Time</p>
+        <div class="cta">
+            <a href="#projects">Explore My Work</a>
+            <a href="resume.pdf" download>Download Resume</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Dedicated Cybersecurity Analyst with over two years of hands-on experience fortifying organizational defenses against advanced threats. Proven expertise in vulnerability management, incident response, and security monitoring, backed by a track record of enhancing system security by 60% and slashing incident resolution times by 50%. Passionate about leveraging cutting-edge tools and rigorous audits to ensure robust, compliant, and resilient security postures.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="experience-card">
+                <h3>Security Analyst - Global Africa Initiative, Garki Abuja</h3>
+                <p>May 2023 - Present</p>
+                <ul>
+                    <li>Performed detailed vulnerability assessments, identifying and resolving critical risks, boosting system security by 60%.</li>
+                    <li>Collaborated with cross-functional teams to analyze and mitigate security incidents, cutting resolution time by 50%.</li>
+                    <li>Configured and monitored SIEM, XDR, and SOAR tools, strengthening defenses against evolving threats.</li>
+                    <li>Conducted regular security audits, ensuring full compliance with industry standards and enhancing overall security posture.</li>
+                </ul>
             </div>
-            <div class="col-md-6 col-lg-8">
-                <!--  right side -->
+            <div class="experience-card">
+                <h3>Cybersecurity Intern - National Defence College Abuja</h3>
+                <p>February 2022 - August 2022</p>
+                <ul>
+                    <li>Executed vulnerability assessments, addressing high-priority issues and improving system security by 30%.</li>
+                    <li>Worked with teams to respond to security incidents, reducing resolution time by 20% through effective coordination.</li>
+                    <li>Assisted in configuring and monitoring SIEM, XDR, and SOAR solutions, bolstering threat detection capabilities.</li>
+                    <li>Supported security audits, achieving 100% compliance with standards and reinforcing organizational defenses.</li>
+                </ul>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!--  other content -->
+    <section id="projects">
+        <h2>Projects & Labs</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Vulnerability Assessment Lab</h3>
+                <p>Scanned Metasploitable with Nmap and Nessus to identify vulnerabilities, then applied patches to secure the system, reducing the attack surface by 70%.</p>
+                <details>
+                    <summary>How It Was Done</summary>
+                    <p>This project demonstrated a structured approach to securing a vulnerable system:<br>
+                    - Established a controlled test environment using Metasploitable to simulate real-world vulnerabilities.<br>
+                    - Conducted an initial scan with Nmap to map open ports and services, identifying potential entry points.<br>
+                    - Utilized Nessus to perform a comprehensive vulnerability assessment, generating a detailed report of weaknesses.<br>
+                    - Analyzed findings to prioritize critical risks, such as outdated software versions.<br>
+                    - Implemented updates and configuration changes to address identified issues effectively.<br>
+                    - Reassessed the system with follow-up scans to ensure vulnerabilities were resolved.<br>
+                    - Achieved a 70% reduction in attack surface, validating the success of the remediation efforts.</p>
+                </details>
+                <a href="https://github.com/4c3x/labs/tree/master/vuln-assessment" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Secure Web App</h3>
+                <p>Built a Flask login system with secure session management to prevent unauthorized access. Tested against OWASP Top 10, ensuring no critical flaws.</p>
+                <details>
+                    <summary>How It Was Done</summary>
+                    <p>This project showcased the development of a secure web application:<br>
+                    - Designed a login system using Flask to manage user access efficiently.<br>
+                    - Protected user credentials with encryption to prevent unauthorized exposure.<br>
+                    - Incorporated safeguards against common attacks, such as malicious input attempts.<br>
+                    - Secured data transmission between users and the server with proper encryption protocols.<br>
+                    - Tested the application against the OWASP Top 10 vulnerabilities using industry-standard tools.<br>
+                    - Addressed identified weaknesses by refining code and enhancing security measures.<br>
+                    - Packaged the application for consistent, secure deployment across environments.<br>
+                    - Confirmed the absence of critical flaws through rigorous validation.</p>
+                </details>
+                <a href="https://github.com/4c3x/labs/tree/master/secure-app" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Static Code Analysis for Vulnerability Detection</h3>
+                <p>Performed SAST on a forked GitHub repo using Snyk to identify and prioritize vulnerabilities, enhancing system security in a DevSecOps pipeline.</p>
+                <details>
+                    <summary>How It Was Done</summary>
+                    <p>This project highlighted expertise in code security within a DevSecOps framework:<br>
+                    - Selected and replicated an open-source GitHub repository with known vulnerabilities.<br>
+                    - Integrated Snyk to scan the codebase for security issues, focusing on outdated components.<br>
+                    - Reviewed scan results to pinpoint high-priority risks requiring immediate attention.<br>
+                    - Applied updates to resolve vulnerabilities, ensuring the use of secure, current libraries.<br>
+                    - Re-evaluated the code to confirm the elimination of identified threats.<br>
+                    - Automated future scans by embedding Snyk into the development pipeline.<br>
+                    - Delivered a significantly more secure codebase, reducing critical risks by 80%.</p>
+                </details>
+                <a href="https://github.com/4c3x/labs/tree/master/code-analysis" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Log Analysis and Incident Response with Azure Sentinel</h3>
+                <p>Configured Azure Sentinel to analyze logs, detect threats, and automate responses, simulating a SOC environment.</p>
+                <details>
+                    <summary>How It Was Done</summary>
+                    <p>This project simulated a Security Operations Center with Azure Sentinel:<br>
+                    - Configured a log collection system within Azure to monitor activity from a test environment.<br>
+                    - Activated Azure Sentinel to centralize and analyze incoming security logs.<br>
+                    - Simulated realistic threats, such as repeated login failures, to generate actionable data.<br>
+                    - Developed detection rules to identify suspicious patterns in the log data.<br>
+                    - Established automated responses to block threats and alert relevant parties.<br>
+                    - Tested the system to ensure rapid identification and mitigation of incidents.<br>
+                    - Fine-tuned detection parameters to minimize false alerts while maintaining accuracy.<br>
+                    - Achieved a 40% faster response time, proving operational effectiveness.</p>
+                </details>
+                <a href="https://github.com/4c3x/labs/tree/master/azure-sentinel" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://github.com/4c3x/labs" target="_blank" class="other-projects-btn">See Other Projects</a>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education & Certifications</h2>
+        <div class="certs-grid">
+            <div class="cert-card">
+                <img src="fut.png" alt="Federal University of Technology Minna">
+                <p>B.Tech, Cybersecurity Science<br>Federal University of Technology Minna</p>
+            </div>
+            <div class="cert-card">
+                <img src="ibm.png" alt="IBM Cybersecurity Analyst">
+                <p>IBM Cybersecurity Analyst</p>
+            </div>
+            <div class="cert-card">
+                <img src="google.png" alt="Google Cybersecurity">
+                <p>Google Cybersecurity Professional</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span class="skill">Kali Linux</span>
+            <span class="skill">SIEM (Splunk)</span>
+            <span class="skill">Vulnerability Assessment</span>
+            <span class="skill">Python</span>
+            <span class="skill">Flask</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">MySQL</span>
+            <span class="skill">Incident Response</span>
+            <span class="skill">Snyk</span>
+            <span class="skill">Azure Sentinel</span>
+            <span class="skill">Acunetix</span>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>
+            <a href="mailto:dagusansi21@gmail.com" target="_blank">dagusansi21@gmail.com</a> |
+            <a href="https://www.linkedin.com/in/ansi-dagus-a1837427b/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/4c3x" target="_blank">GitHub</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2025 Dagus Ansi. All rights reserved.</p>
+        <p>
+            <a href="mailto:dagusansi21@gmail.com" target="_blank">Email</a> |
+            <a href="https://www.linkedin.com/in/ansi-dagus-a1837427b/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/4c3x" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
 </body>
 
-	
-    <div id="tab-container"></div>
-
-    <div id="datetime"></div>
-
-    <div id="icon-container">
-        <div class="icon icon-a" data-name="Resume" onclick="openResume()">
-          <span>Resume</span>
-          </div>
-
-        <div class="icon icon-c" data-name="Project/Labs"><span>Project/Labs</span></div>
-        
-
-    <div class="icon icon-d" data-name="GitHub" onclick="openGithubProfile()">
-        <span>GitHub</span>
-    </div>
-
-    <div class="icon icon-e" data-name="LinkedIn" onclick="openLinkedInProfile()">
-        <span>LinkedIn</span>
-    </div>
-        <div class="icon icon-b" data-name="About" onclick="toggleGreyArea()"><span>About</span></div>
-    </div>
-
-    <div class="blank-area">
-        
-        <div class="tab">Project/Labs</div>
-        <span class="close-button" onclick="closeBlankArea()">x</span>
-        <div class="blank-icon blank-icon-a" data-name="Personal Projects"><span>Personal Projects</span></div>
-        <div class="blank-icon blank-icon-b" data-name="Security Labs"><span>Security Labs</span></div>
-    </div>
-                                               
- <div class="blank-area-2">
-        <div class="tab">Security Labs</div>
-        <span class="prev-button-2" onclick="prevBlankArea2()"><<</span>
-        <span class="close-button-2" onclick="closeBlankArea2()">x</span>
-      <div class="security-labs-icon security-labs-icon-a" data-name="Security lab 1"><span>Security Lab 1</span></div>
-        <div class="security-labs-icon security-labs-icon-b" data-name="Security Lab 2"><span>Security Lab 2</span></div>
-        <div class="security-labs-icon security-labs-icon-c" data-name="Security Lab 3"><span>Security Lab 3</span></div>
-        <div class="security-labs-icon security-labs-icon-d" data-name="Security Lab 4"></div>
-    </div>
-                                                 
-<div class="blank-area-3">
-        <div class="tab">Personal Projects</div>
-        <span class="prev-button-3" onclick="prevBlankArea3()"><<</span>
-        <span class="close-button-3" onclick="closeBlankArea3()">x</span>
-        
-        <div class="Personal-Projects-icon Personal-Projects-icon-a" data-name="Password Manager"><span>Password Manager</span></div>
-        <div class="Personal-Projects-icon Personal-Projects-icon-b" data-name="Jumia bot"><span>Jumia bot</span></div>
-        <div class="Personal-Projects-icon Personal-Projects-icon-c" data-name="QuickVault"><span>Quick Vault</span></div>
-        <div class="Personal-Projects-icon Personal-Projects-icon-d" data-name="Online Portfolio"><span>Online Portfolio</span></div>
-    </div> 
-
-<div class="per-pro-1">
-        <div class="tab">Personal Projects</div>
-        <span class="per-pro1-prev-button" onclick="prevper_pro_icon1()"><<</span>
-        <span class="per-pro1-close-button" onclick="closeper_pro_icon1()">x</span>
-        <div>
-            
-	   
-           <span style="color: #ffff; font-size: 40px;">Password Manager</span>
-            <hr style="border: 0.5px solid #808080; margin: 0; ">
-            <p style="color: #ffff; font-size: 15px; margin: 0;">Built with Python, Pip, & Tkinter - A Windows OS Application.</p>
-            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">A simple Password Manager that generates strong unguessable passwords, it also keeps track of all generated passwords including date and time the password was generated. </p>
-            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">See Screenshots below. </p> 
-             <div class="pp1sc pp1sc-a" data-name="security-labs1"></div> 
-             <div class="pp1sc pp1sc-b" data-name="security-labs1"></div>
-             <br>
-             <a class= "btn" href="https://github.com/4c3x/Password-Generator/tree/main" target="_blank">
-              View Code
-             </a>
-             <br>
-             <br>
-             <a class= "btn" href="https://drive.google.com/file/d/1yjkUZ9zKu5-kaZphaEUWVQClmLf8JB_j/view?usp=drive_link" target="_blank">
-              Download
-             </a>
-
-</div>   
-    </div>
-  </div>
-
-<div class="per-pro-2">
-        <div class="tab">Personal Projects</div>
-        <span class="per-pro1-prev-button" onclick="prevper_pro_icon2()"><<</span>
-        <span class="per-pro1-close-button" onclick="closeper_pro_icon2()">x</span>
-        <div>
-            <span style="color: #ffff; font-size: 40px;">Online Chatbot</span>
-            <hr style="border: 0.5px solid #808080; margin: 0; ">
-            <p style="color: #ffff; font-size: 15px; margin: 0;">Built with Dialogflow, Nodejs - A Messenger-based Application</p>
-            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">An interactive chatbotfor an e-commerce store, it displays available goods on the store, manages carts and handles trasnsactions. </p>
-            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">See Screenshots below. </p> 
-             <div class="pp2sc pp2sc-a" data-name="security-labs1"></div> 
-             <div class="pp2sc pp2sc-b" data-name="security-labs1"></div>
-               <br>
-             <a class= "btn" href="https://github.com/4c3x" target="_blank">
-              View Code
-             </a>
-             <br>
-             <br>
-             <a class= "btn" href="https://m.me/Jumiabot/" target="_blank">
-              Try it
-             </a>
-
-        </div>
-  </div>
-
-<div class="per-pro-3">
-        <div class="tab">Personal Projects</div>
-        <span class="per-pro1-prev-button" onclick="prevper_pro_icon3()"><<</span>
-        <span class="per-pro1-close-button" onclick="closeper_pro_icon3()">x</span>
-        <div>
-            <span style="color: #ffff; font-size: 40px;">QuickVault</span>
-            <hr style="border: 0.5px solid #808080; margin: 0; ">
-            <p style="color: #ffff; font-size: 15px; margin: 0;">Built with PHP, HTML, CSS, Javascript, Mysql - A Web-based application</p>
-            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;"> A fully functional Finacial web application, allows for transfer of funds between users</p>
-            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">Login details;  </p> 
-             <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">Username: 4c3xx  </p> 
-             <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">Password: 4c3xx  </p> 
-            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">See Screenshots below. </p> 
-            <p style="color: #ffff; font-size: 15px; margin-bottom: 2.5px;">Note: This is just a test web application. </p> 
-             <div class="pp3sc pp3sc-a" data-name="security-labs1"></div> 
-             <div class="pp3sc pp3sc-b" data-name="security-labs1"></div>
-              <br>
-             <a class= "btn" href="https://github.com/4c3x/QuickVault" target="_blank">
-              View Code
-             </a>
-             <br>
-             <br>
-             <a class= "btn" href="http://quickvault.atwebpages.com/customer_home.php" target="_blank">
-              Try it
-             </a>
-
-        </div>
-  </div>
-
-<div class="per-pro-4">
-        <div class="tab">Personal Projects</div>
-        <span class="per-pro1-prev-button" onclick="prevper_pro_icon4()"><<</span>
-        <span class="per-pro1-close-button" onclick="closeper_pro_icon4()">x</span>
-        <div>
-            <span style="color: #ffff; font-size: 40px;">Online Portfolio</span>
-            <hr style="border: 0.5px solid #808080; margin: 0; ">
-            <p style="color: #ffff; font-size: 15px; margin: 0;">Built with HTML, CSS & Javascript - A Web-based Application</p>
-            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;"> A creative, fully responsive portfolio, fashioned in the manner of traditional kali linux desktop</p>
-            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;">See Screenshots below. </p> 
-             <div class="pp4sc pp4sc-a" data-name="security-labs1"></div> 
-             <div class="pp4sc pp4sc-b" data-name="security-labs1"></div>
-              <br>
-             <a class= "btn" href="https://github.com/4c3x/4c3x.github.io" target="_blank">
-              View Code
-             </a>
-            
-
-        </div>
-  </div>
-
-  <div class="sec-lab-1"> 
-        <div class="tab">Security Labs</div>
-        <span class="sec-lab1-prev-button" onclick="prevsec_lab_icon1()"><<</span>
-        <span class="sec-lab1-close-button" onclick="closesec_lab_icon1()">x</span>
-        <div>
-         <span style="color: #ffff; font-size: 40px;">Code Analysis</span>
-            <hr style="border: 0.5px solid #808080; margin: 0; ">
-            <p style="color: #ffff; font-size: 15px; margin: 0;">Tools Used - Synk, Github </p>
-            
-            <video width="320" height="200" controls>
-        <source src="media/vid2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-            
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 1: Fork the repository on Github</p>
-    
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 2: login to synk.io </p>
-
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 3: click on Add Project and select Github</p>
-
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 4: Search for the already forked Repo, select it then click on Add selected repositories</p>
-     
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 5: You will be redirected to your dashboard where you will see the added repository under targets</p>
-    
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Click on it and Review the information and decide on the appropriate actions to address the vulnerabilities.</p>
-  
-        </div>
-  </div> 
-
-<div class="sec-lab-2">
-        <div class="tab">Security Labs</div>
-        <span class="sec-lab1-prev-button" onclick="prevsec_lab_icon2()"><<</span>
-        <span class="sec-lab1-close-button" onclick="closesec_lab_icon2()">x</span>
-        <div>
-             <span style="color: #ffff; font-size: 40px;">Vulnerability Analysis</span>
-            <hr style="border: 0.5px solid #808080; margin: 0; ">
-            <p style="color: #ffff; font-size: 15px; margin: 0;">Tools Used - Acunetix</p>
-             <video width="320" height="200" controls>
-        <source src="media/vid3.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-            
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 1: Login to Acunetix</p>
-    
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 2: Add a Target. In this case i use a web application created by myself due to privacy and permission issues </p>
-
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 3: Add scan configurations for the target</p>
-
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 4: Begin scan</p>
-     
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 5: After the scan is completed, View scan results</p>
-    
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 6: Generate report</p>
-  
-             
-        </div>
-  </div>
-
-<div class="sec-lab-3">
-        <div class="tab">Security Labs</div>
-        <span class="sec-lab1-prev-button" onclick="prevsec_lab_icon3()"><<</span>
-        <span class="sec-lab1-close-button" onclick="closesec_lab_icon3()">x</span>
-        <div>
-         <span style="color: #ffff; font-size: 40px;">Log Analysis</span>
-            <hr style="border: 0.5px solid #808080; margin: 0; ">
-            <p style="color: #ffff; font-size: 15px; margin: 0;">Tools Used - Azure Sentinel </p>
-            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;"> Vid not available </p>
-            <p style="color: #ffff; font-size: 20px; margin: 1;">Step 1: In the Azure Portal. search for "Azure Sentinel", and set up a new workspace </p>
-    
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 2: click on "Data connectors" and add data sources </p>
-
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 3: Click "connect" for each data source and configure the data connectors</p>
-
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 4: Go to "Logs" section, Use KQL (Kusto Query Language) to write simple queries to explore log data</p>
-     
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 5: Go to "Workbooks" section, create a new workbook to build visualizations based on your log data</p>
-    
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 6: Navigate to "Analytics" section, click on Rules and customize existing rules or create new rules </p>
-
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 7: Move to "Incidents" tab, set up incident rules, define incident types and workflows for incident management</p>
-
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 8: When there is an incident, head over to "Incidents" tab, select the incident and use the investigation tools to analyze and understand the situation</p>
-     
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 9: You can also create automated responses and define actions to mitigate potential threats in the "Playbooks" section.</p>
-        </div>
-  </div>
-
-<!-- <div class="sec-lab-4">
-        <div class="tab">Security Labs</div>
-        <span class="sec-lab1-prev-button" onclick="prevsec_lab_icon4()"><<</span>
-        <span class="sec-lab1-close-button" onclick="closesec_lab_icon4()">x</span>
-       <div>
-<span style="color: #ffff; font-size: 40px;">Network Analysis</span>
-            <hr style="border: 0.5px solid #808080; margin: 0; ">
-            <p style="color: #ffff; font-size: 15px; margin: 0;">Tools Used - Snort </p>
-            <p style="color: #ffff; font-size: 20px; margin-bottom: 2.5px;"> Vid, steps to acheive this</p>
-            <p style="color: #ffff; font-size: 20px; margin: 1;">Step 1: Fork the repository on Github</p>
-    
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 2: login to synk.io </p>
-
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 3: click on Add Project and select Github</p>
-
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 4: Search for the already forked Repo, select it then click on Add selected repositories</p>
-     
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Step 5: You will be redirected to your dashboard where you will see the added repository under targets</p>
-    
-    <p style="color: #ffff; font-size: 20px; margin: 1;">Click on it and Review the information and decide on the appropriate actions to address the vulnerabilities.</p>
-             
-        </div>
-  </div> -->
-                                       
- <div class="grey-area">
-    <div style="display: flex; align-items: flex-start; margin-bottom: 10px;">
-        <img src="media/fe.png" alt="Icon" style="width: 80px; height: 85px; margin-right: 10px;">
-        <div>
-            <span style="color: #ffff; font-size: 40px;">Dagus Ansi</span>
-            <p style="color: #ffff; font-size: 20px; margin-bottom: 0px;">dagusansi21@gmail.com | +2348062601396 </p>
-        </div>
-    </div>
-    <hr style="border: 0.5px solid #808080; margin-bottom: 10px; ">
-    
-    <h2 style="color: #ffff; font-size: 30px; margin-bottom: 0px;">Experience</h2>
-    <hr style="border: 0.5px solid #808080; margin-bottom: 5px; ">
-   
-    <p style="color: #ffff; font-size: 24px; margin-bottom: 5px;">MAY 2023 - Present <br>
-    Skytech Integrated Network Limited - Cyber Security Analyst 
-</p>
-    <p style="color: #ffff; font-size: 20px; margin-bottom: 10;">
-        Conducted in-depth vulnerability assessments, collaborated on remediation strategies, and responded to security incidents. Additionally, contributed to configuring, monitoring security tools, and participating in regular audits to ensure industry standards compliance.
-    </p>
-	  <p style="color: #ffff; font-size: 24px; margin-bottom: 2.5px;">MARCH 2021 - FEBRUARY 2023 <br>
-    Aceworld Inc, Remote - Software Engineer</p>
-    <p style="color: #ffff; font-size: 20px; margin-bottom: 10;">
-       
-    Developed and maintained software applications using web development tools and frameworks such as Flask, Django, and Node.js for both frontend and backend, debugged and resolved software defects, ensuring enhanced overall system functionality. Engaging in code reviews in adherence to best practices and industry standards, demonstrating proficiency in problem-solving, troubleshooting, and conducting source code analysis for security flaws.
-    </p>
-
-     <h2 style="color: #ffff; font-size: 30px; margin-bottom: 10px;">Education</h2>
-     <hr style="border: 0.5px solid #808080; margin-bottom: 2.5px; ">
-     <p style="color: #ffff; font-size: 22px; margin-bottom: 2px;">B.Tech Cyber Security Science</p>
-     <p style="color: #ffff; font-size: 22px; margin-bottom: 10;">Federal University of Technology, Minna</p>
-     <h2 style="color: #ffff; font-size: 30px; margin-bottom: 10px;">Skills</h2>
-     <hr style="border: 0.5px solid #808080; margin-bottom: 2.5px; ">
-     <p style="color: #ffff; font-size: 20px; margin-bottom: 2px;">Problem Solving</p>
-    <p style="color: #ffff; font-size: 20px; margin: 0;">Vulnerability Assessment</p>
-    <p style="color: #ffff; font-size: 20px; margin: 0;">Log Analyis</p>
-    <p style="color: #ffff; font-size: 20px; margin: 0;">Effective Communication</p>
-    
-</div>
-
-    <div class="grey-area" onclick="stopPropagation()"></div>
-<!--  -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!--  scripts -->
 
     <script src="scripts.js">
     </script>
