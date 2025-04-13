@@ -1,4 +1,4 @@
-const taglines = [
+ const taglines = [
             "Securing the Future, One Byte at a Time",
             "Hunting Threats, Building Solutions",
             "Code Securely, Sleep Soundly",
@@ -22,3 +22,8 @@ const taglines = [
                 document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
