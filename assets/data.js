@@ -64,8 +64,6 @@ export const APPS = [
     stack: ["Flutter", "NestJS", "Supabase"] },
   { id: "afriroute", name: "Afri-Routa", tag: "African food and fashion, UK", android: play("com.afri.routa"),
     about: "Authentic African food, drinks and clothing, delivered across the UK." },
-  { id: "gatepass", name: "GatePass", tag: "Smart gate access", android: play("com.gatepass.app"),
-    about: "Gate and barrier access control for residents and property managers." },
   { id: "hsa", name: "Health Service Africa", tag: "Book a doctor online", android: play("com.healthserviceafrica.hsa"),
     about: "Book doctors, chat privately and manage your health, with care available across Africa." },
 ];

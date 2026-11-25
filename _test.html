@@ -16,7 +16,7 @@
 
   ok("About and Apps open on first paint", vis("about") && vis("apps"));
   ok("address bar untouched on first paint", w.location.hash === "");
-  ok("20 apps in the Apps window", d.querySelectorAll("#win-apps [data-app]").length === 20);
+  ok(`${APPS.length} apps in the Apps window`, d.querySelectorAll("#win-apps [data-app]").length === APPS.length);
 
   d.querySelector('[data-dock="security"]').click(); await wait(400);
   ok("dock opens Security", vis("security"));
@@ -42,7 +42,7 @@
   d.getElementById("theme-toggle").click();
 
   d.querySelector('[data-dock="apps"]').click(); await wait(400);
-  ok("dock Apps resets to the grid", d.querySelectorAll("#win-apps [data-app]").length === 20);
+  ok("dock Apps resets to the grid", d.querySelectorAll("#win-apps [data-app]").length === APPS.length);
   d.querySelector('#win-apps [data-tab="web"]').click(); await wait(50);
   ok("Websites tab shows 4 sites", d.querySelectorAll("#win-apps .site-card").length === 4);
   ok("address bar shows #apps/websites", w.location.hash === "#apps/websites");
