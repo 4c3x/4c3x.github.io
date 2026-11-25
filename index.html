@@ -1,198 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dagus Ansi\</title>
-    <link rel="icon" type="image/x-icon" href="media/fav.ico">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dagus Ansi, security-focused software engineer</title>
+  <meta name="description" content="Security-focused software engineer in Nigeria with 20 apps live on the App Store and Google Play. Flutter, React, Next.js and Supabase. Open to remote roles and freelance work.">
+  <meta name="theme-color" content="#eeece7">
+  <link rel="canonical" href="https://4c3x.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://4c3x.github.io/">
+  <meta property="og:title" content="Dagus Ansi, security-focused software engineer">
+  <meta property="og:description" content="20 apps live on the App Store and Google Play. Open to remote roles and freelance work.">
+  <meta property="og:image" content="https://4c3x.github.io/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  </script>
+  <script type="module" src="assets/os.js"></script>
 </head>
-<body>
-    <nav>
-        <div class="nav-container">
-            <span class="hamburger" onclick="toggleMenu()">☰</span>
-            <ul id="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education & Certifications</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body class="os">
+  <a class="skip" href="cv.html">Read the plain CV page instead</a>
 
-    <div class="binary-bg"></div>
+  <header class="menubar">
+    <div class="menubar-left">
+      <span class="brand">DagusOS</span>
+      <span class="menubar-app" id="active-app">About</span>
+    </div>
+    <div class="menubar-right">
+      <span class="status"><span class="status-dot" aria-hidden="true"></span>Open to work</span>
+      <a class="menubar-link" href="cv.html">View CV</a>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark mode"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-moon"/></svg></button>
+      <span class="clock" id="clock" aria-label="Local time in Nigeria"></span>
+    </div>
+  </header>
 
-    <header>
-        <h1>Dagus Ansi</h1>
-        <p>Cybersecurity Analyst</p>
-        <p class="tagline" id="tagline">Securing the Future, One Byte at a Time</p>
-        <div class="cta">
-            <a href="#projects">Explore My Work</a>
-            <a href="Dagus Ansi.pdf" download>Download Resume</a>
-        </div>
-    </header>
+  <main class="desktop" id="desktop">
+    <div class="wallpaper" aria-hidden="true"><span class="wallpaper-name">Dagus Ansi</span></div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Dedicated Cybersecurity Analyst with over two years of hands-on experience fortifying organizational defenses against advanced threats. Proven expertise in vulnerability management, incident response, and security monitoring, backed by a track record of enhancing system security by 60% and slashing incident resolution times by 50%. Passionate about leveraging cutting-edge tools and rigorous audits to ensure robust, compliant, and resilient security postures.</p>
+    <section class="home" aria-label="Home screen">
+      <div class="home-card" id="home-card"></div>
+      <h2 class="home-label">DagusOS</h2>
+      <div class="home-grid" id="home-system"></div>
+      <h2 class="home-label">Shipped apps</h2>
+      <div class="home-grid" id="home-apps"></div>
     </section>
+  </main>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="timeline">
-            <div class="experience-card">
-                <h3>Security Analyst - Skytech Integrated Network Limited</h3>
-                <p>May 2023 - Present</p>
-                <ul>
-                    <li>Performed detailed vulnerability assessments, identifying and resolving critical risks, boosting system security by 60%.</li>
-                    <li>Collaborated with cross-functional teams to analyze and mitigate security incidents, cutting resolution time by 50%.</li>
-                    <li>Configured and monitored SIEM, XDR, and SOAR tools, strengthening defenses against evolving threats.</li>
-                    <li>Conducted regular security audits, ensuring full compliance with industry standards and enhancing overall security posture.</li>
-                </ul>
-            </div>
-            <div class="experience-card">
-                <h3>Cybersecurity Intern - National Defence College Abuja</h3>
-                <p>February 2022 - August 2022</p>
-                <ul>
-                    <li>Assisted in running vulnerability scans with Kali Linux tools (e.g., Nmap), documenting findings and learning to prioritize risks under supervision.</li>
-                    <li>Observed and supported incident response drills, analyzing logs with Splunk to identify anomalies, improving understanding of threat patterns.</li>
-                    <li>Helped configure SIEM dashboards and alerts, gaining hands-on experience with XDR/SOAR tools and their role in threat detection.</li>
-                    <li>Compiled audit checklists and shadowed compliance reviews, mastering standards like NIST and contributing to report preparation.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+  <nav class="dock" aria-label="Dock">
+    <div id="dock-apps" style="display: contents"></div>
+    <span class="dock-sep" aria-hidden="true"></span>
+    <a class="dock-item" href="cv.html"><span class="dock-tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-file-text"/></svg></span><span class="dock-label">CV</span></a>
+  </nav>
 
-    <section id="projects">
-        <h2>Projects & Labs</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Vulnerability Assessment Lab</h3>
-                <p>Scanned Metasploitable with Nmap and Nessus to identify vulnerabilities, then applied patches to secure the system, reducing the attack surface by 70%.</p>
-                <details>
-                    <summary>How It Was Done</summary>
-                    <p>This project demonstrated a structured approach to securing a vulnerable system:<br>
-                    - Established a controlled test environment using Metasploitable to simulate real-world vulnerabilities.<br>
-                    - Conducted an initial scan with Nmap to map open ports and services, identifying potential entry points.<br>
-                    - Utilized Nessus to perform a comprehensive vulnerability assessment, generating a detailed report of weaknesses.<br>
-                    - Analyzed findings to prioritize critical risks, such as outdated software versions.<br>
-                    - Implemented updates and configuration changes to address identified issues effectively.<br>
-                    - Reassessed the system with follow-up scans to ensure vulnerabilities were resolved.<br>
-                    - Achieved a 70% reduction in attack surface, validating the success of the remediation efforts.</p>
-                </details>
-                <a href="https://github.com/4c3x/labs/tree/master/vuln-assessment" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-card">
-                <h3>Secure Web App</h3>
-                <p>Built a Flask login system with secure session management to prevent unauthorized access. Tested against OWASP Top 10, ensuring no critical flaws.</p>
-                <details>
-                    <summary>How It Was Done</summary>
-                    <p>This project showcased the development of a secure web application:<br>
-                    - Designed a login system using Flask to manage user access efficiently.<br>
-                    - Protected user credentials with encryption to prevent unauthorized exposure.<br>
-                    - Incorporated safeguards against common attacks, such as malicious input attempts.<br>
-                    - Secured data transmission between users and the server with proper encryption protocols.<br>
-                    - Tested the application against the OWASP Top 10 vulnerabilities using industry-standard tools.<br>
-                    - Addressed identified weaknesses by refining code and enhancing security measures.<br>
-                    - Packaged the application for consistent, secure deployment across environments.<br>
-                    - Confirmed the absence of critical flaws through rigorous validation.</p>
-                </details>
-                <a href="https://github.com/4c3x/labs/tree/master/secure-app" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-card">
-                <h3>Static Code Analysis for Vulnerability Detection</h3>
-                <p>Performed SAST on a forked GitHub repo using Snyk to identify and prioritize vulnerabilities, enhancing system security in a DevSecOps pipeline.</p>
-                <details>
-                    <summary>How It Was Done</summary>
-                    <p>This project highlighted expertise in code security within a DevSecOps framework:<br>
-                    - Selected and replicated an open-source GitHub repository with known vulnerabilities.<br>
-                    - Integrated Snyk to scan the codebase for security issues, focusing on outdated components.<br>
-                    - Reviewed scan results to pinpoint high-priority risks requiring immediate attention.<br>
-                    - Applied updates to resolve vulnerabilities, ensuring the use of secure, current libraries.<br>
-                    - Re-evaluated the code to confirm the elimination of identified threats.<br>
-                    - Automated future scans by embedding Snyk into the development pipeline.<br>
-                    - Delivered a significantly more secure codebase, reducing critical risks by 80%.</p>
-                </details>
-                <a href="https://github.com/4c3x/labs/tree/master/code-analysis" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-card">
-                <h3>Log Analysis and Incident Response with Azure Sentinel</h3>
-                <p>Configured Azure Sentinel to analyze logs, detect threats, and automate responses, simulating a SOC environment.</p>
-                <details>
-                    <summary>How It Was Done</summary>
-                    <p>This project simulated a Security Operations Center with Azure Sentinel:<br>
-                    - Configured a log collection system within Azure to monitor activity from a test environment.<br>
-                    - Activated Azure Sentinel to centralize and analyze incoming security logs.<br>
-                    - Simulated realistic threats, such as repeated login failures, to generate actionable data.<br>
-                    - Developed detection rules to identify suspicious patterns in the log data.<br>
-                    - Established automated responses to block threats and alert relevant parties.<br>
-                    - Tested the system to ensure rapid identification and mitigation of incidents.<br>
-                    - Fine-tuned detection parameters to minimize false alerts while maintaining accuracy.<br>
-                    - Achieved a 40% faster response time, proving operational effectiveness.</p>
-                </details>
-                <a href="https://github.com/4c3x/labs/tree/master/azure-sentinel" target="_blank">View on GitHub</a>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 30px;">
-            <a href="https://github.com/4c3x/labs" target="_blank" class="other-projects-btn">See Other Projects</a>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2>Education & Certifications</h2>
-        <div class="certs-grid">
-            <div class="cert-card">
-                 <img src="media/fut.png" alt="Federal University of technology, Minna">
-                <p>B.Tech, Cybersecurity Science<br>Federal University of Technology Minna</p>
-            </div>
-            <div class="cert-card">
-                <img src="media/ibm.png" alt="IBM Cybersecurity Analyst">
-                <p>IBM Cybersecurity Analyst</p>
-            </div>
-            <div class="cert-card">
-                <img src="media/google.png" alt="Google Cybersecurity">
-                <p>Google Cybersecurity Professional</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <span class="skill">Kali Linux</span>
-            <span class="skill">SIEM (Splunk)</span>
-            <span class="skill">Vulnerability Assessment</span>
-            <span class="skill">Python</span>
-            <span class="skill">Flask</span>
-            <span class="skill">Node.js</span>
-            <span class="skill">MySQL</span>
-            <span class="skill">Incident Response</span>
-            <span class="skill">Snyk</span>
-            <span class="skill">Azure Sentinel</span>
-            <span class="skill">Acunetix</span>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>
-            <a href="mailto:dagusansi21@gmail.com" target="_blank">dagusansi21@gmail.com</a> |
-            <a href="https://www.linkedin.com/in/dagusansi/" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/4c3x" target="_blank">GitHub</a>
-        </p>
-    </section>
-
-    <footer>
-        <p>© 2025 Dagus Ansi. All rights reserved.</p>
-        <p>
-            <a href="mailto:dagusansi21@gmail.com" target="_blank">Email</a> |
-            <a href="https://www.linkedin.com/in/dagusansi/" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/4c3x" target="_blank">GitHub</a>
-        </p>
-    </footer>
-
-    <script src="scripts.js"></script>
+  <noscript>
+    <p style="position: relative; z-index: 2; max-width: 520px; margin: 80px auto; padding: 24px; background: #fff; border-radius: 14px">
+      DagusOS needs JavaScript. You can still email me at dagusansi21@gmail.com or find me on
+      <a href="https://www.linkedin.com/in/dagusansi">LinkedIn</a>.
+    </p>
+  </noscript>
 </body>
 </html>

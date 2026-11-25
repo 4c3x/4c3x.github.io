@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dagus Ansi, CV</title>
+  <meta name="description" content="CV of Dagus Ansi, security-focused software engineer. 20 apps live on the App Store and Google Play.">
+  <meta name="theme-color" content="#eeece7">
+  <link rel="canonical" href="https://4c3x.github.io/cv.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Dagus Ansi, CV">
+  <meta property="og:image" content="https://4c3x.github.io/assets/og.png">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  </script>
+</head>
+<body>
+  <main class="cv">
+    <div class="cv-top no-print">
+      <a class="btn" href="./">
+        <svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-app-window"/></svg>Back to DagusOS
+      </a>
+      <div class="cv-top-actions">
+        <button class="btn btn-primary" type="button" onclick="print()">
+          <svg class="i" aria-hidden="true"><use href="assets/icons.svg#i-printer"/></svg>Download PDF
+        </button>
+      </div>
+    </div>
+    <div id="cv"></div>
+  </main>
+
+  <script type="module">
+    import { PROFILE, APPS, SITES, CASES, EXPERIENCE, EDUCATION, CERTS } from "./assets/data.js";
+    const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const platforms = (a) => [a.ios && "iOS", a.android && "Android"].filter(Boolean).join(" and ");
+    const list = (items, a, b, c) => `<ul class="cv-list">${items.map((x) => `<li class="cv-row"><div><strong>${esc(x[a])}</strong><span>, ${esc(x[b])}</span></div>${c && x[c] ? `<span>${esc(x[c])}</span>` : ""}</li>`).join("")}</ul>`;
+
+    document.getElementById("cv").innerHTML = `
+      <header class="cv-head">
+        <img class="avatar" src="assets/me.webp" width="84" height="84" alt="Dagus Ansi">
+        <div>
+          <h1>${esc(PROFILE.name)}</h1>
+          <p>${esc(PROFILE.role)}. ${esc(PROFILE.location)}, ${esc(PROFILE.timezone)}. ${esc(PROFILE.availability)}.</p>
+          <p class="cv-contact">
+            <a href="mailto:${PROFILE.email}">${esc(PROFILE.email)}</a>
+            <a href="${PROFILE.linkedin}">linkedin.com/in/dagusansi</a>
+            <a href="${PROFILE.github}">github.com/4c3x</a>
+            <a href="https://4c3x.github.io">4c3x.github.io</a>
+          </p>
+        </div>
+      </header>
+      <section><h2>Summary</h2><p class="cv-summary">${esc(PROFILE.intro)} ${APPS.length} of my apps are live on the App Store and Google Play.</p></section>
+      <section><h2>Experience</h2>${list(EXPERIENCE, "role", "org", "when")}</section>
+      <section><h2>Shipped apps</h2><div class="cv-apps">${APPS.map((a) => `<div class="cv-app">
+        <img src="assets/apps/${a.id}.webp" alt="" width="36" height="36">
+        <div><a href="${a.ios || a.android}"><strong>${esc(a.name)}</strong></a><span>${esc(a.tag)}. ${platforms(a)}</span></div></div>`).join("")}</div></section>
+      <section><h2>Websites</h2><ul class="cv-list">${SITES.map((s) => `<li class="cv-row"><div><strong>${esc(s.name)}</strong><span>, ${esc(s.about.replace(/\.$/, ""))}</span></div><a href="${s.url}">${esc(s.url.replace("https://", ""))}</a></li>`).join("")}</ul></section>
+      <section><h2>Security work</h2><ul class="cv-list">${CASES.map((c) => `<li><strong>${esc(c.title)}.</strong> <p>${esc(c.text)}</p></li>`).join("")}</ul></section>
+      <section><h2>Skills</h2><p>${esc(PROFILE.stack.join(", "))}, PostgreSQL, NestJS, Prisma, Stripe, Vercel, Cloudflare, Linux server administration, row-level security, incident response.</p></section>
+      <section><h2>Education</h2>${list(EDUCATION, "title", "org")}</section>
+      <section><h2>Certificates</h2>${list(CERTS, "title", "org")}</section>`;
+  </script>
+</body>
+</html>
